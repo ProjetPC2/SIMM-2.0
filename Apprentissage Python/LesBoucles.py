@@ -16,7 +16,7 @@ def Bonjour(nombre):
 #Pour l'utilisation de la boucle for, vous aurez un exemple dans le fichier Liste
 #Pour l'utilisation des mots-cles break et continue, je vous laisse vous amusez avec ^^
 
-
+   
 if __name__ == '__main__':
-    Bonjour(12)
+    Bonjour(12)  
     Bonjour(-3)
