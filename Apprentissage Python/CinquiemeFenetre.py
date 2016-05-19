@@ -20,7 +20,6 @@ class Example(QWidget):
         commentaire = QLabel('Commentaire')
 
         titleEdit = QLineEdit()
-        titleEdit.enterEvent()
         authorEdit = QLineEdit()
         reviewEdit = QTextEdit()
         okButton = QPushButton("OK")
