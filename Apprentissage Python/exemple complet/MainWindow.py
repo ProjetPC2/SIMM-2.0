@@ -12,7 +12,7 @@ import sys
 from PyQt5.QtCore import QDate
 from PyQt5 import QtGui
 
-import options
+import Options
 import Formulaire
 import FormulaireRempli
 import Stockage
@@ -40,7 +40,7 @@ class MainWindow(QMainWindow):
         #Creation des differents composants de la fenetre
         self.formulaire = Formulaire.Formulaire(self)
         self.formulaireRempli = FormulaireRempli.FormulaireRempli(self)
-        self.options = options.Options(self)
+        self.options = Options.Options(self)
         self.formulaire.widgetList[0].textEdited.connect(self.miseAJourStatutBar)
         self.stockage = Stockage.Stockage()
         self.listeTemp = list()
