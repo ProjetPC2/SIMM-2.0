@@ -152,7 +152,6 @@ class Formulaire(QWidget):
         self.widgetList.append(etatConservationGroup)
         self.widgetList.append(commentaire)
 
-
         #Layouts
         vbox = QVBoxLayout()
         vbox.addLayout(formulaireConteneur)
