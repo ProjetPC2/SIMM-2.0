@@ -6,6 +6,7 @@ from PyQt5.QtCore import QCoreApplication, Qt
 from PyQt5.QtWidgets import*
 
 from PyQt5.QtCore import QDate
+from PyQt5.QtGui import QIcon, QFont
 
 
 class Example(QWidget):
@@ -18,7 +19,8 @@ class Example(QWidget):
 
     def initUI(self):
         # Label
-        Titre = QLabel('Bon de travail- maintenance et réparation')
+        self.Titre = QLabel('Bon de travail- maintenance et réparation')
+        self.Titre.setFont((QFont('SansSerif', 24)))
 
 
         ID = QLabel('ID')
@@ -71,7 +73,7 @@ class Example(QWidget):
         grid = QGridLayout()
         grid.setSpacing(10)
 
-        grid.addWidget(Titre,1,0)
+        grid.addWidget(self.Titre,1,0)
 
         grid.addWidget(ID, 2, 0)
         grid.addWidget(idEdit, 3, 0)
