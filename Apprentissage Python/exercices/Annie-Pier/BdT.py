@@ -7,8 +7,11 @@ from PyQt5.QtWidgets import*
 
 from PyQt5.QtCore import QDate
 from PyQt5.QtGui import QIcon, QFont
+from PyQt5.QtCore import QCoreApplication, Qt
 
 
+from qtconsole.qt import QtCore
+from qtpy import QtGui
 class Example(QWidget):
 
     def __init__(self):
@@ -39,11 +42,8 @@ class Example(QWidget):
 
         # Edit (ligne pour écrire)
 
-                 # Nombre aléatoire
-        a= random.randrange(0, 101, 2)
-        b= str(a)
-        idEdit = QLineEdit(b)
 
+        idEdit = QLineEdit()
         catEdit = QLineEdit()
         markEdit = QLineEdit()
         modelEdit = QLineEdit()
@@ -135,6 +135,7 @@ class Example(QWidget):
 
         self.setGeometry(300, 300, 700, 600)
         self.setWindowTitle('PC2')
+        self.setWindowIcon(QIcon('PC2_logo.png'))
         self.show()
 
 
@@ -142,19 +143,27 @@ class Example(QWidget):
     # Bouton
 
 
-        btn = QPushButton('Ajout bon travail', self)
-       # btn.setIcon(QIcon('fleche-gauche-droite.png'))
-       # btn.setIconSize(QtCore.QSize(24,24))
-        btn.resize(btn.sizeHint())
-        grid.addWidget(btn,9, 6)
+        self.ajoutBdT = QPushButton('')
+        self.ajoutBdT.setIcon(QtGui.QIcon("Bouton_Sauvegarde.gif"))
+        self.ajoutBdT.setIconSize(QtCore.QSize(50, 50))
+        grid.addWidget(self.ajoutBdT,9, 2)
 
-        btn2 = QPushButton('<', self)
-        btn2.resize(btn.sizeHint())
-        grid.addWidget(btn2, 9, 7)
+        btnGG = QPushButton('<<', self)
+        btnGG.resize(btnGG.sizeHint())
+        grid.addWidget(btnGG, 9, 3)
 
-        btn3 = QPushButton('>', self)
-        btn3.resize(btn.sizeHint())
-        grid.addWidget(btn3, 9, 8)
+
+        btnG = QPushButton('<', self)
+        btnG.resize(btnG.sizeHint())
+        grid.addWidget(btnG, 9, 4)
+
+        btnD = QPushButton('>', self)
+        btnD.resize(btnD.sizeHint())
+        grid.addWidget(btnD, 9, 5)
+
+        btnDD = QPushButton('>>', self)
+        btnDD.resize(btnDD.sizeHint())
+        grid.addWidget(btnDD, 9, 6)
 
 
      # Ecriture de la date sur la ligne
@@ -162,6 +171,10 @@ class Example(QWidget):
         dateEdit = QDateEdit()
         grid2.addWidget(dateEdit, 4, 0)
         dateEdit.setDate(QDate.currentDate())
+
+    #connection
+
+        self.ajoutBdT.clicked.connect(self.afficheMessage)
 
     def onActivated(self, text):
 
@@ -177,6 +190,39 @@ class Example(QWidget):
     def keyPressEvent1(self, e):
         if e.key() == Qt.Key_Enter:
             self.setWindowTitle()
+
+    def afficheMessage(self, event):
+
+        """Methode affichant une fenetre de confirmation pour l'ajout d'un equipement
+        Cette fenetre va nous faire passer dans le mode consultable
+        Les champs ne seront plus modifiables"""
+        message = QMessageBox()
+        #On met le texte en gras avec les bases <b> </b>
+        message.setText("<b>Sauvegarde du bon de travail</b>")
+        message.setInformativeText("Vous allez sauvegarder un nouveau bon de travail")
+        message.setWindowTitle("Confirmation")
+        message.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+        message.buttonClicked.connect(self.confirmation)
+        message.exec()
+
+    def confirmation(self,i):
+        #Methode qui va faire appel a la methode valider
+        #Cette methode est appelee une fois que l'ajout d'un element a ete confirme
+        if i.text() == "OK":
+            self.valider()
+
+    def valider(self):
+        """Methode valider qui va changer le contenu de la fenetre une fois l'equipement valider
+        Cette methode va tout d'abord declancher une fenetre de confirmation
+        Puis si la confirmation est valide, elle va mettre les informations sous forme de Qlabel
+        Les informations ne seront donc plus modifiables, on passe en mode consultatble"""
+        self.formulaire.hide()
+        self.validerBouton.hide()
+        self.formulaireRempli.show()
+        self.modifierBouton.show()
+        self.statusBar().showMessage("Modification d'un equipement")
+        self.donnees()
+        self.resize(1000,1000)
 
 
 
