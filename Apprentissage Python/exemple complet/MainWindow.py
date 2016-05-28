@@ -204,7 +204,7 @@ class MainWindow(QMainWindow):
             i += 1
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": #Si le fichier est lancé tout seul
 
     app = QApplication(sys.argv)
     window = MainWindow()
