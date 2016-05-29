@@ -216,13 +216,25 @@ class Example(QWidget):
         Cette methode va tout d'abord declancher une fenetre de confirmation
         Puis si la confirmation est valide, elle va mettre les informations sous forme de Qlabel
         Les informations ne seront donc plus modifiables, on passe en mode consultatble"""
-        self.formulaire.hide()
         self.validerBouton.hide()
         self.formulaireRempli.show()
-        self.modifierBouton.show()
-        self.statusBar().showMessage("Modification d'un equipement")
         self.donnees()
         self.resize(1000,1000)
+
+    def donnees(self):
+        """Methode permettant la recuperation des donnees dans les differents widgets
+        On parcours la liste des widgets et on recupere les differentes informations utiles
+        Les informations sont recuperees de facon specifique selon le type du widget"""
+        for widget in self.widgetList:
+            if type(widget) is QLineEdit:
+                self.listeTemp.append(widget.text())
+    def remplissageFormulaire(self):
+        """Methode permettant de remplir le formulaire dans le mode consultable"""
+        i = 0
+        for text in self.listeTemp:
+            self.formulaireRempli.widgetList[i].setText(text)
+            i += 1
+
 
 
 
