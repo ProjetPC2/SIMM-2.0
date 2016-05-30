@@ -7,52 +7,65 @@ import re
 class EquipementManager:
     def __init__(self, pathname, archive_id_eq_pathname):
         self._pathname = pathname                               # pathname de la base de données des équipements
-        self._archive_id_eq_pathname = archive_id_eq_pathname   # pathname de la base de données de l'archive des équip.
+        self._nextID = 0   # pathname de la base de données de l'archive des équip.
+        # nextID à mettre dans le fichier de configuration
 
     def AjouterEquipement(self, dictio):
         #print('ouverture de la bdd')
         db1 = TinyDB(self._pathname, storage=yamlStorage.YAMLStorage)        # data base des équipements
-        db2 = TinyDB(self._archive_id_eq_pathname, storage=yamlStorage.YAMLStorage)
         #print('Attribution du ID')
         id_eq = self._ObtenirProchainID()                                   # id du nouvel équipement
-        db2.insert({'id': str(id_eq), 'utilisation': True})          # ajout d'un nouvel équipement utilisé dans l'archive
         #print(str(id_eq))
         #print('Insertion de equipement')
-        db1.insert({'id': str(id_eq), 'data': dictio['data']})           # ajout du nouvel équipement dans la base de données
+        dictio['ID'] = id_eq
+        # Verifier que tout ce qui est dans dictio est conforme à la forme d'un équipement et COMPLET
+        db1.insert(dictio)           # ajout du nouvel équipement dans la base de données
 
     def SupprimerEquipement(self, id_supp):
         Equipement = Query()
         db = TinyDB(self._pathname, storage=yamlStorage.YAMLStorage)        # data base des équipements
-        db_arch = TinyDB(self._archive_id_eq_pathname, storage=yamlStorage.YAMLStorage) # data base de l'archive
-        db.remove(Equipement['id'] == id_supp)                  # suppression de l'équipement (à voir...)
-        db_arch.update({'utilisation': False}, Equipement['id'] == id_supp)
-
-        # **************************************************************************************************
-        # Voir avec Maxime et Alex:
-        # # lorsqu'on supprime un équipement, est-ce qu'on fait seulement que changer l'état de
-        # l'équipement, c-à-d changer le champ 'état de service' : Au rebut, dans le dictionnaire? Cela ferait en sorte
-        # qu'on garderait tous les équipements 'au rebut' dans la bdd, mais ce champ indiquerait si on les affiche ou
-        # non lorsqu'on fait un recherche. Pour les afficher, il faudrait préciser que l'équipement est au rebut.
-        #
-        # A quel point est-ce nécessaire d'avoir 2 bases de données : base de données + archive? On pourrait mettre dans
-        # la base de donnée directement un champ "utilisation" ou "statut" ...
-        # **************************************************************************************************
+        result = db.remove(Equipement['ID'] == id_supp)                              # suppression de l'équipement (à voir...)
+        return result
 
     def RechercherEquipement(self, regex_dict):
         db = TinyDB(self._pathname, storage=yamlStorage.YAMLStorage)
 
         recherche = Query()
-        # Définir les critères de recherche
-
-        result = db.search(recherche['id'].matches(regex_dict['id']) & recherche['data'].matches['CategorieEquipement'])
+        
+        firstEntry = True
+        for key,value in regex_dict:
+            if firstEntry:
+                queryUser = recherche[key].matches(value)
+                firstEntry = False
+            else:
+                queryUser = & recherche[key].matches(value)
+        result = db.search(queryUser)
         return result
 
     def ModifierEquipement(self, id_modif, dict_modif):
         Equipement = Query()
         db = TinyDB(self._pathname, storage=yamlStorage.YAMLStorage)        # data base des équipements
-        db.update({'data': dict_modif}, Equipement['id'] == id_modif)  # modif du dict associé à l'équipement
+        # Verifier que tout ce qui est dans dict_modif est conforme à la forme d'un équipement et COMPLET
+        db.update(dict_modif, Equipement['ID'] == id_modif)  # modif du dict associé à l'équipement
 
     def _ObtenirProchainID(self):
-        db = TinyDB(self._archive_id_eq_pathname, storage=yamlStorage.YAMLStorage)   # data base de l'ARCHIVE des équipements
-        nb_element = len(db)                                                         # nb d'équipements dans la base de données
-        return nb_element + 1                                       # nouvel id (prochain numéro sur la liste)
+        ID = self._nextID
+        self._nextID = self._nextID + 1                             # nb d'équipements dans a base de données
+        return ID                                                   # nouvel id (prochain numéro sur la liste)
+
+    def _VerifierDict(self, dictio):
+        conforme = self.verifierChamps(dictio)
+        # Vérifier que le contenu de chaque champ est conforme à ce qui est attendu
+        for key, value in dictio:
+            if key == '':
+                if (value != TODO)
+                    conforme = False
+            elif key == '':
+            ...
+            else:
+                
+        
+    def _verifierChamps(self, dictio)
+    # verifier la présence de tous les champs et qu'aucun champs supplémentaire ne soit présent
+    conforme = True
+    return conforme
