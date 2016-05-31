@@ -1,6 +1,6 @@
 """
 Dans ce fichier vous pourrez voir :
--un exemple de creation d'un classe
+-un exemple de creation d'une classe
 -l'utilisation des getters et setters avec la fonction property
 -l'utilisation des variables globales
 """

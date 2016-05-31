@@ -30,6 +30,7 @@ class Formulaire(QWidget):
         #creation de la ligne pour l'id
         idLabel = QLabel("Id :", self)
         idEdit = QLineEdit()
+
         #creation de la ligne pour la categorie d'equipement
         categorieEquipementLabel = QLabel("Categorie Equipement : ", self)
         categorieEquipementComboBox = QComboBox()
