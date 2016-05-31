@@ -27,7 +27,7 @@ class Stockage():
             return self._dictionnaire
 
         def _setDictionnaire(self, dict):  # mutateur sur la variabe _age
-            self._age = dict
+            self._dictionnaire = dict
 
 
         dictionnaire = property(_getDictionnaire, _setDictionnaire)
