@@ -1,0 +1,22 @@
+_default:
+  1: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: IRM
+      ID: 1
+      Marque: GE
+      Modele: GE-2321
+    state:
+      eid: 1
+  2: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: IRM
+      ID: 2
+      Marque: GE
+      Modele: GE-2321
+    state:
+      eid: 2
+  3:
+    CategorieEquipement: ECG
+    ID: 3
+    Marque: PierreSavard
+    Modele: L5509
