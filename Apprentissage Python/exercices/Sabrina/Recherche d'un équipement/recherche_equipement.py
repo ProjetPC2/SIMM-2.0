@@ -37,7 +37,7 @@ class rechercheEquipement(QWidget):
         NoSerieLabel = QLabel('Numéro de série')
         NoSerieEdit = QLineEdit()
 
-        CategorieEquipLabel = QLabel('Catégorie d''équipement')
+        CategorieEquipLabel = QLabel("Catégorie d'équipement")
         CategorieEquipComboBox = QComboBox()
         for equipement in ListeDefilante.listeCategorieEquip:
             CategorieEquipComboBox.addItem(equipement)
