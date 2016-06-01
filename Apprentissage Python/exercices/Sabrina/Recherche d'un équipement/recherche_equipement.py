@@ -33,43 +33,29 @@ class rechercheEquipement(QWidget):
         NoSerieEdit = QLineEdit()
 
         CategorieEquipLabel = QLabel('Catégorie d''équipement')
-        CategorieEquipEdit = QLineEdit()
         CategorieEquipComboBox = QComboBox()
         for equipement in ListeDefilante.listeCategorieEquip:
             CategorieEquipComboBox.addItem(equipement)
+
         EtatServiceLabel = QLabel('État de service')
-        EtatServiceEdit = QLineEdit()
         EtatServiceComboBox = QComboBox()
         for etat in ListeDefilante.listeEtatService:
             EtatServiceComboBox.addItem(etat)
 
         CentreServiceLabel = QLabel('Centre de service')
-        CentreServiceEdit = QLineEdit()
         CentreServiceComboBox = QComboBox()
         for centre in ListeDefilante.listeCentreService:
             CentreServiceComboBox.addItem(centre)
 
         SalleLabel = QLabel('Salle')
-        SalleEdit = QLineEdit()
         SalleComboBox = QComboBox()
         for salle in ListeDefilante.listeSalle:
             SalleComboBox.addItem(salle)
 
         ProvenanceLabel = QLabel('Provenance')
-        ProvenanceEdit = QLineEdit()
         ProvenanceComboBox = QComboBox()
         for provenance in ListeDefilante.listeProvenance:
             ProvenanceComboBox.addItem(provenance)
-
-
-        quitButton = QPushButton("Quitter")
-
-        hbox = QHBoxLayout()
-        hbox.addStretch(1)
-        hbox.addWidget(quitButton)
-        quitButton.clicked.connect(QCoreApplication.instance().quit)
-        vbox = QVBoxLayout()
-        vbox.addStretch(1)
 
         grid = QGridLayout()
         grid.setSpacing(10)
@@ -77,30 +63,33 @@ class rechercheEquipement(QWidget):
         grid.addWidget(self.Titre, 1, 0)
 
         grid.addWidget(CategorieEquipLabel, 2, 0)
-        grid.addWidget(CategorieEquipEdit, 3, 0)
+        grid.addWidget(CategorieEquipComboBox, 3, 0)
 
-        grid.addWidget(NoSerieLabel, 2, 3)
-        grid.addWidget(NoSerieEdit, 3, 3)
+        grid.addWidget(NoSerieLabel, 2, 1)
+        grid.addWidget(NoSerieEdit, 3, 1)
+
 
         grid.addWidget(EtatServiceLabel, 4, 0)
-        grid.addWidget(EtatServiceEdit, 5, 0)
+        grid.addWidget(EtatServiceComboBox, 5, 0)
 
         grid.addWidget(CentreServiceLabel, 4, 1)
-        grid.addWidget(CentreServiceEdit, 5, 1)
+        grid.addWidget(CentreServiceComboBox, 5, 1)
 
-        grid.addWidget(SalleLabel, 4, 2)
-        grid.addWidget(SalleEdit, 5, 2)
 
-        grid.addWidget(ProvenanceLabel, 4, 3)
-        grid.addWidget(ProvenanceEdit, 5, 3)
+        grid.addWidget(SalleLabel, 6, 0)
+        grid.addWidget(SalleComboBox, 7, 0)
 
-        #Ajout de la comboBox au layout
-        grid.addWidget(ProvenanceComboBox)
+        grid.addWidget(ProvenanceLabel, 6, 1)
+        grid.addWidget(ProvenanceComboBox, 7, 1)
+
+        quitButton = QPushButton("Quitter")
+        grid.addWidget(quitButton, 9, 1)
+        quitButton.clicked.connect(QCoreApplication.instance().quit)
 
         self.setLayout(grid)
 
-        self.setGeometry(300, 300, 350, 300)
-        self.setWindowTitle('Review')
+        self.setGeometry(300, 300, 700, 300)
+        self.setWindowTitle('Projet PC2')
         self.show()
 
         def keyPressEvent(self, e):
