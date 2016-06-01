@@ -4,24 +4,20 @@ Fichier de création d'une fenêtre de recherche d'un équipement :
 import sys
 
 from PyQt5.QtCore import QCoreApplication, Qt
-from PyQt5.QtWidgets import*
+from PyQt5.QtWidgets import *
 
 from PyQt5.QtGui import QIcon, QFont
 
+class ListeDefilante():
+    #On ne peut pas creer deux classes l'une dans l'autre
+    listeCategorieEquip = ["Categorie1", "Categorie2", "Categorie3"]
+    listeEtatService = ["En service", "En maintenance", "Au rebus"]
+    listeCentreService = ["Centre 1", "Centre 2", "Centre 3"]
+    listeSalle = ["Chambre patient", "Salle d'operation", "Salle de reunion"]
+    listeProvenance = ["CHU Ste-Justine", "Provenance 2", "Provenance 3"]
+
+
 class rechercheEquipement(QWidget):
-
-    class listeDefilante():
-
-        global listeCategorieEquip
-        listeCategorieEquip = ["Categorie1", "Categorie2", "Categorie3"]
-        global listeEtatService
-        listeEtatService = ["En service", "En maintenance", "Au rebus"]
-        global listeCentreService
-        listeCentreService = ["Centre 1", "Centre 2", "Centre 3"]
-        global listeSalle
-        listeSalle = ["Chambre patient", "Salle d'operation", "Salle de reunion"]
-        global listeProvenance
-        listeProvenance = ["CHU Ste-Justine", "Provenance 2", "Provenance 3"]
 
     def __init__(self):
         super().__init__()
@@ -39,31 +35,30 @@ class rechercheEquipement(QWidget):
         CategorieEquipLabel = QLabel('Catégorie d''équipement')
         CategorieEquipEdit = QLineEdit()
         CategorieEquipComboBox = QComboBox()
-        for equipement in listeDefilante.listeCategorieEquip:
+        for equipement in ListeDefilante.listeCategorieEquip:
             CategorieEquipComboBox.addItem(equipement)
-
         EtatServiceLabel = QLabel('État de service')
         EtatServiceEdit = QLineEdit()
         EtatServiceComboBox = QComboBox()
-        for etat in listeDefilante.listeEtatService:
+        for etat in ListeDefilante.listeEtatService:
             EtatServiceComboBox.addItem(etat)
 
         CentreServiceLabel = QLabel('Centre de service')
         CentreServiceEdit = QLineEdit()
         CentreServiceComboBox = QComboBox()
-        for centre in listeDefilante.listeCentreService:
+        for centre in ListeDefilante.listeCentreService:
             CentreServiceComboBox.addItem(centre)
 
         SalleLabel = QLabel('Salle')
         SalleEdit = QLineEdit()
         SalleComboBox = QComboBox()
-        for salle in listeDefilante.listeSalle:
+        for salle in ListeDefilante.listeSalle:
             SalleComboBox.addItem(salle)
 
         ProvenanceLabel = QLabel('Provenance')
         ProvenanceEdit = QLineEdit()
         ProvenanceComboBox = QComboBox()
-        for provenance in listeDefilante.listeProvenance:
+        for provenance in ListeDefilante.listeProvenance:
             ProvenanceComboBox.addItem(provenance)
 
 
@@ -98,6 +93,9 @@ class rechercheEquipement(QWidget):
 
         grid.addWidget(ProvenanceLabel, 4, 3)
         grid.addWidget(ProvenanceEdit, 5, 3)
+
+        #Ajout de la comboBox au layout
+        grid.addWidget(ProvenanceComboBox)
 
         self.setLayout(grid)
 
