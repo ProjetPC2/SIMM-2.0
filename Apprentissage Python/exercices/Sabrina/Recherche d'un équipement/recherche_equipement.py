@@ -3,9 +3,10 @@ Fichier de création d'une fenêtre de recherche d'un équipement :
 """
 import sys
 
+from PyQt5 import QtGui
 from PyQt5.QtCore import QCoreApplication, Qt
 from PyQt5.QtWidgets import *
-
+from qtconsole.qt import QtCore
 from PyQt5.QtGui import QIcon, QFont
 
 class ListeDefilante():
@@ -26,8 +27,12 @@ class rechercheEquipement(QWidget):
     def initUI(self):
         self.widgetList = list()
 
+        self.setWindowIcon(QIcon('web.png'))
+
         self.Titre = QLabel('Assistant de recherche - Équipement')
         self.Titre.setFont((QFont('SansSerif', 24)))
+        #self.Titre.setIcon(QtGui.QIcon("loupe.png"))
+        #self.Titre.setIconSize(QtCore.QSize(50, 50))
 
         NoSerieLabel = QLabel('Numéro de série')
         NoSerieEdit = QLineEdit()
@@ -85,6 +90,7 @@ class rechercheEquipement(QWidget):
         quitButton = QPushButton("Quitter")
         grid.addWidget(quitButton, 9, 1)
         quitButton.clicked.connect(QCoreApplication.instance().quit)
+
 
         self.setLayout(grid)
 
