@@ -59,10 +59,11 @@ class EquipementManager:
         return prochain_ID
 
 
-        #self._nextID = self._nextID + 1                             # nb d'équipements dans a base de données
-        #print('ID', ID)
-        #print('self.nextID', self._nextID)
-        #return self._nextID                                                   # nouvel id (prochain numéro sur la liste)
+    def _verifierChamps(self, dictio):
+
+        dictio[]
+
+
 
     """def _VerifierDict(self, dictio):
         conforme = self.verifierChamps(dictio)
@@ -92,6 +93,6 @@ dic_request = {'CategorieEquipement': 'ECG',
                'Marque': 'PierreSavard',
                'Modele': 'blabla'}
 
-print(manager.RechercherEquipement(dic_request))
+
 
 
