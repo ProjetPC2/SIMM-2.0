@@ -17,6 +17,8 @@ from PyQt5.QtWidgets import (QWidget, QLabel, QLineEdit,
 from qtconsole.qt import QtCore
 from qtpy import QtGui
 
+import Stockage
+
 
 class ConsultationModificationEquipement(QWidget):
     """"Création de la classe qui va gérer la fenetre
@@ -49,19 +51,36 @@ class ConsultationModificationEquipement(QWidget):
 
         #Création des champs d'entrée de texte
         identifiantEdit = QLineEdit()
-        categorieEdit = QLineEdit()
-        marqueEdit = QLineEdit()
-        modeleEdit = QLineEdit()
-        numeroDeSerieEdit = QLineEdit()
-        salleEdit = QLineEdit()
-        centreDeServiceEdit = QLineEdit()
-        dateDacquisititonEdit = QLineEdit()
-        dateDuDernierEntretienEdit = QLineEdit()
-        provenanceEdit = QLineEdit()
-        etatDeServiceEdit = QLineEdit()
-        listeDesBonsDeTravailEdit = QLineEdit()
-        etatDeConservationEdit = QLineEdit()
+        #categorieEdit = QLineEdit()
+        #marqueEdit = QLineEdit()
+        #modeleEdit = QLineEdit()
+        #numeroDeSerieEdit = QLineEdit()
+        #salleEdit = QLineEdit()
+        #centreDeServiceEdit = QLineEdit()
+        #dateDacquisititonEdit = QLineEdit()
+        #dateDuDernierEntretienEdit = QLineEdit()
+        #provenanceEdit = QLineEdit()
+        #etatDeServiceEdit = QLineEdit()
+        #listeDesBonsDeTravailEdit = QLineEdit()
+        #etatDeConservationEdit = QLineEdit()
 
+        # creation de la ligne pour la categorie d'equipement
+        categorieEquipementLabel = QLabel("Ici Categorie Equipement  ", self)
+        marqueLabel = QLabel("Ici marque", self)
+        modeleLabel = QLabel("Ici Modele ", self)
+        numSerieLabel = QLabel("Ici No. de serie ", self)
+        salleLabel = QLabel("Ici Label ", self)
+        centreServiceLabel = QLabel("Ici Centre de service ", self)
+        dateAcquisitionLabel = QLabel("Ici Date d'acquisition ", self)
+        dateEntretienLabel = QLabel("Ici Date du dernier entretien", self)
+        provenanceLabel = QLabel("Ici Provenance", self)
+        etatServiceLabel = QLabel("Ici Etat de service ", self)
+        etatConservationLabel = QLabel("Ici Etat de conservation ", self)
+        commentairesLabel = QLabel("Ici commentaires ", self)
+
+        listeDesBonsDeTravailComboBox = QComboBox()
+        for bon in Stockage.listeBonsDeTravail:
+            listeDesBonsDeTravailComboBox.addItem(bon)
 
         #Création d'un champ d'entrée multiligne
         commentairesEdit = QTextEdit()
@@ -110,43 +129,43 @@ class ConsultationModificationEquipement(QWidget):
         grid.addWidget(identifiantEdit, 1, 1)
 
         grid.addWidget(categorie, 2, 0)
-        grid.addWidget(categorieEdit, 2, 1)
+        grid.addWidget(categorieEquipementLabel, 2, 1)
 
         grid.addWidget(marque, 3, 0)
-        grid.addWidget(marqueEdit, 3, 1)
+        grid.addWidget(marqueLabel, 3, 1)
 
         grid.addWidget(modele, 4, 0)
-        grid.addWidget(modeleEdit, 4, 1)
+        grid.addWidget(modeleLabel, 4, 1)
 
         grid.addWidget(numeroDeSerie, 5, 0)
-        grid.addWidget(numeroDeSerieEdit, 5, 1)
+        grid.addWidget(numSerieLabel, 5, 1)
 
         grid.addWidget(salle, 6, 0)
-        grid.addWidget(salleEdit, 6, 1)
+        grid.addWidget(salleLabel, 6, 1)
 
         grid.addWidget(centreDeService, 7, 0)
-        grid.addWidget(centreDeServiceEdit, 7, 1)
+        grid.addWidget(centreServiceLabel, 7, 1)
 
         grid.addWidget(dateDacquisititon, 8, 0)
-        grid.addWidget(dateDacquisititonEdit, 8, 1)
+        grid.addWidget(dateAcquisitionLabel, 8, 1)
 
         grid.addWidget(dateDuDernierEntretien, 9, 0)
-        grid.addWidget(dateDuDernierEntretienEdit, 9, 1)
+        grid.addWidget(dateEntretienLabel, 9, 1)
 
         grid.addWidget(provenance, 10, 0)
-        grid.addWidget(provenanceEdit, 10, 1)
+        grid.addWidget(provenanceLabel, 10, 1)
 
         grid.addWidget(etatDeService, 11, 0)
-        grid.addWidget(etatDeServiceEdit, 11, 1)
+        grid.addWidget(etatServiceLabel, 11, 1)
 
-        grid.addWidget(listeDesBonsDeTravail, 12, 0)
-        grid.addWidget(listeDesBonsDeTravailEdit, 12, 1)
+        grid.addWidget(etatDeConservation, 12, 0)
+        grid.addWidget(etatConservationLabel, 12, 1)
 
-        grid.addWidget(etatDeConservation, 13, 0)
-        grid.addWidget(etatDeConservationEdit, 13, 1)
+        grid.addWidget(commentaires, 15, 0)
+        grid.addWidget(commentairesLabel, 15, 1, 5, 1)
 
-        grid.addWidget(commentaires, 14, 0)
-        grid.addWidget(commentairesEdit, 14, 1, 5, 1)
+        grid.addWidget(listeDesBonsDeTravail, 18, 0)
+        grid.addWidget(listeDesBonsDeTravailComboBox, 18, 1)
 
         # Mise en place de la forme de la fenetre
         self.setGeometry(200, 100, 200, 1000)
