@@ -10,7 +10,6 @@ from qtconsole.qt import QtCore
 from PyQt5.QtGui import QIcon, QFont
 
 class ListeDefilante():
-    #On ne peut pas creer deux classes l'une dans l'autre
     listeCategorieEquip = ["Categorie1", "Categorie2", "Categorie3"]
     listeEtatService = ["En service", "En maintenance", "Au rebus"]
     listeCentreService = ["Centre 1", "Centre 2", "Centre 3"]
@@ -26,6 +25,7 @@ class rechercheEquipement(QWidget):
 
     def initUI(self):
         self.widgetList = list()
+        #self.window.colorFont('red')
 
         self.setWindowIcon(QIcon('web.png'))
 
@@ -88,9 +88,8 @@ class rechercheEquipement(QWidget):
         grid.addWidget(ProvenanceComboBox, 7, 1)
 
         quitButton = QPushButton("Quitter")
-        grid.addWidget(quitButton, 9, 1)
+        grid.addWidget(quitButton, 12, 1)
         quitButton.clicked.connect(QCoreApplication.instance().quit)
-
 
         self.setLayout(grid)
 
@@ -98,13 +97,48 @@ class rechercheEquipement(QWidget):
         self.setWindowTitle('Projet PC2')
         self.show()
 
-        def keyPressEvent(self, e):
+        # donnees teste sous forme d'un liste de tuple
+        tableData = [
+            ("123", 'table', "a"),
+            ("456", 'chaise', "b"),
+            ("789", 'toto', "c")
+            ]
 
-            if e.key() == Qt.Key_Escape:
-                self.close()
+        # creation d'une table widget de taille 3x3
+        table = QTableWidget(3, 3)
+           # on met les titres des colonnes
+        table.setHorizontalHeaderLabels(["ID", "Catégorie d'équipement", "Marque"])
+        table.resize(300, 100)
+
+        # remplissage du tableau
+        for i, (name, color, lettre) in enumerate(tableData):
+                #Creation des QTableWidgetItem
+            nameItem = QTableWidgetItem(name)
+            colorItem = QTableWidgetItem(color)
+            lettreItem = QTableWidgetItem(lettre)
+            # Insertion des elements
+            table.setItem(i, 0, nameItem)
+            table.setItem(i, 1, colorItem)
+            table.setItem(i, 2, lettreItem)
+            # table.resizeColumnToContents(0)
+            # On fait en sorte que la table prend la largeur de la fenetre
+            table.horizontalHeader().setStretchLastSection(True)
+
+            #layout = QGridLayout()
+            grid.addWidget(table, 10, 0)
+            self.resize(1000, 1000)
+            #self.setLayout(layout)
+
+            def keyPressEvent(self, e):
+
+                if e.key() == Qt.Key_Escape:
+                    self.close()
+
 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = rechercheEquipement()
     sys.exit(app.exec_())
+    ex.show()
+    a.exec_()
