@@ -49,6 +49,20 @@ class Example(QWidget):
         #Positionnement du bouton
         qbtn.move(150, 150)
 
+        #Bar de Menu
+
+        menubar = self.menuBar()
+        fileMenu = menubar.addMenu('&File')
+        fileMenu.addAction('Ajouter une action')
+        fileMenu = menubar.addMenu('&Edit')
+        fileMenu = menubar.addMenu('&View')
+        fileMenu = menubar.addMenu('&Insert')
+        fileMenu = menubar.addMenu('&Format')
+        fileMenu = menubar.addMenu('&Table')
+        fileMenu = menubar.addMenu('&Tools')
+        fileMenu = menubar.addMenu('&Window')
+        fileMenu = menubar.addMenu('&Help')
+
         #Definition des attributs de la fenetre
         self.setGeometry(300, 300, 300, 220)
         self.setWindowTitle('PC2')

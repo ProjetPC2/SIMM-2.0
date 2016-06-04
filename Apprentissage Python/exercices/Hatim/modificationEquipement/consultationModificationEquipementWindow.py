@@ -100,7 +100,7 @@ class ConsultationModificationEquipement(QWidget):
 
         #Création d'un layout horizontal
         hbox = QHBoxLayout()
-        #hbox.addStretch(1)
+       # hbox.addStretch(1)
 
         # Création d'un second layout horizontal pour le titre
         hbox2 = QHBoxLayout()
