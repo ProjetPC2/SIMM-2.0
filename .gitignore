@@ -13,3 +13,7 @@ GUI_V1/__pycache__/Stockage.cpython-35.pyc
 GUI_V1/__pycache__/Support.cpython-35.pyc
 GUI_V1/__pycache__/RechercherEquipementFenetre.cpython-35.pyc
 GUI_V1/.idea/workspace.xml
+GUI_V1/.idea/workspace.xml
+*.iml
+.idea/misc.xml
+*.pyc

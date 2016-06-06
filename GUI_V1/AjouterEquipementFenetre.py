@@ -37,7 +37,7 @@ class AjouterEquipementFenetre(QMainWindow, AbstractWindow):
         # Création des differents éléments
         self.titre = QLabel("Formulaire - Ajout d'un equipement")
         self.logo = QLabel()
-        self.logo.setPixmap(QPixmap('Images\PdC-Bouton_Ajouter.png'))
+        self.logo.setPixmap(QPixmap('Images/PdC-Bouton_Ajouter.png'))
         self.titre.setFont((QFont('SansSerif', 24)))
         self.statusBar().showMessage("Ajout d'un equipement")
         #Creation des differents composants de la fenetre
@@ -107,7 +107,7 @@ class AjouterEquipementFenetre(QMainWindow, AbstractWindow):
         self.setGeometry(200, 200, 300, 300)
         self.resize(1000,1000)
         self.setWindowTitle("SIMM 2.0")
-        self.setWindowIcon(QIcon('Images\PC2.png'))
+        self.setWindowIcon(QIcon('Images/PC2.png'))
 
 
     def valider(self):
