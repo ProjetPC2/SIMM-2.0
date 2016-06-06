@@ -17,8 +17,7 @@ import Formulaire
 import FormulaireRempli
 import Stockage
 from AbstractWindow import AbstractWindow
-from BDD import EquipementManager
-from BDD.EquipementManager import *
+
 
 class AjouterEquipementFenetre(QMainWindow, AbstractWindow):
     """La classe AjouterEquipementFenetre est la classe qui est va servir a creer la fenetre principal
@@ -47,7 +46,6 @@ class AjouterEquipementFenetre(QMainWindow, AbstractWindow):
         self.formulaire.widgetList[0].textEdited.connect(self.miseAJourStatutBar)
         self.stockage = Stockage.Stockage()
         self.listeTemp = list()
-        self.equipementManager = EquipementManager("BDD\DataBase_Equipement.json")
         # creation du menu
         menubar = self.menuBar()
         # Créations de l'action quitter dans le menu

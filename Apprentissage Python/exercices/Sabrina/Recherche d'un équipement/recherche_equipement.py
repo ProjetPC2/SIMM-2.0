@@ -57,6 +57,7 @@ class rechercheEquipement(QWidget):
         for salle in ListeDefilante.listeSalle:
             SalleComboBox.addItem(salle)
 
+
         ProvenanceLabel = QLabel('Provenance')
         ProvenanceComboBox = QComboBox()
         for provenance in ListeDefilante.listeProvenance:
