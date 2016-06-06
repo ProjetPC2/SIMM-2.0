@@ -1,0 +1,19 @@
+_default:
+  1: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Equip-modif
+      ID: 1
+      Marque: Test-modif
+      Modele: Modifie
+      Nombre de bons de travail: 4
+    state:
+      eid: 1
+  2: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Equip-modif
+      ID: 2
+      Marque: Test-modif
+      Modele: Modifie
+      Nombre de bons de travail: 0
+    state:
+      eid: 2
