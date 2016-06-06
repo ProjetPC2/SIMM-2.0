@@ -13,9 +13,9 @@ from PyQt5.QtWidgets import (QWidget, QToolTip,
                              QPushButton, QApplication, QMessageBox, QDesktopWidget)
 from PyQt5.QtGui import QIcon, QFont
 from PyQt5.QtCore import QCoreApplication
+from PyQt5.QtWidgets import QMainWindow
 
-
-class Example(QWidget):
+class Example(QMainWindow):
     """Classe qui nous servira d'exemple
     Notre classe hérite de la classe Qwidget"""
     def __init__(self):
@@ -94,4 +94,5 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = Example()
     ex.show()
+    ex.center()
     sys.exit(app.exec_())

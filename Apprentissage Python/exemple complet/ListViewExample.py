@@ -10,7 +10,7 @@ class ListViewExample(QWidget):
         self.createGUI()
 
     def createGUI(self):
-        #donnes teste sous forme d'un liste de tuple
+        #donnees test sous forme d'une liste de tuple
         tableData = [
             ("123", 'table', "a"),
             ("456", 'chaise', "b"),

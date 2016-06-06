@@ -10,7 +10,6 @@ Dans ce fichier vous pourrez voir :
 -l'utilisation des QTextEdit
 """
 import sys
-from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import *
 import Stockage
 from PyQt5.QtCore import QDate
@@ -60,7 +59,7 @@ class Formulaire(QWidget):
         centreServiceComboBox = QComboBox()
         for centre in Stockage.listeCentreService:
             centreServiceComboBox.addItem(centre)
-
+        centreServiceComboBox.setEditable(True)
         # creation de la partie pour la date d'acquisition
         dateAcquisitionLabel = QLabel("Date d'acquisition : ")
         dateAcquisitionEdit = QDateEdit()
@@ -71,7 +70,7 @@ class Formulaire(QWidget):
         dateEntretienEdit.setDate(QDate.currentDate())
 
         #creation de la partie pour la provenance
-        provenanceLabel = QLabel()
+        provenanceLabel = QLabel("Provenance :")
         provenanceEdit = QLineEdit()
 
         #creation de la partie pour le choix de l'etat de service
@@ -79,12 +78,12 @@ class Formulaire(QWidget):
         etatServiceLabel = QLabel("Etat de service : ")
         etatServiceRadioConteneur = QVBoxLayout()
         etatServiceEnService = QRadioButton("En service", self)
-        etatServiceEnService.toggled.connect(self.service)
+        etatServiceEnService.toggled.connect(self.enService)
         etatServiceEnService.setChecked(True)
         etatServiceEnMaintenance = QRadioButton("En maintenance", self)
-        etatServiceEnMaintenance.toggled.connect(self.service)
+        etatServiceEnMaintenance.toggled.connect(self.enMaintenance)
         etatServiceAuRebus = QRadioButton("Au rebus", self)
-        etatServiceAuRebus.toggled.connect(self.service)
+        etatServiceAuRebus.toggled.connect(self.auRebus)
 
         etatServiceGroup = QGroupBox()
         # etatServiceGroup.(etatServiceEnService)
@@ -102,14 +101,14 @@ class Formulaire(QWidget):
         etatConservationLabel = QLabel("Etat de conservation : ")
         etatConservationRadioConteneur = QVBoxLayout()
         etatConservationQuasiNeuf = QRadioButton("Quasi neuf", self)
-        etatConservationQuasiNeuf.toggled.connect(self.conservation)
+        etatConservationQuasiNeuf.toggled.connect(self.estQuasiNeuf)
         etatConservationQuasiNeuf.setChecked(True)
         etatConservationAcceptable = QRadioButton("Acceptable", self)
-        etatConservationAcceptable.toggled.connect(self.conservation)
+        etatConservationAcceptable.toggled.connect(self.acceptable)
         etatConservationEnFinDeVie = QRadioButton("En fin de vie", self)
-        etatConservationEnFinDeVie.toggled.connect(self.conservation)
+        etatConservationEnFinDeVie.toggled.connect(self.enFinDeVie)
         etatConservationDesuet = QRadioButton("Desuet", self)
-        etatConservationDesuet.toggled.connect(self.conservation)
+        etatConservationDesuet.toggled.connect(self.desuet)
         etatConservationGroup = QGroupBox()
         # etatConservationGroup.addButton(etatConservationQuasiNeuf)
         # etatConservationGroup.addButton(etatConservationAcceptable)
@@ -121,12 +120,17 @@ class Formulaire(QWidget):
         etatConservationRadioConteneur.addWidget(etatConservationDesuet)
 
         etatConservationGroup.setLayout(etatConservationRadioConteneur)
-
+        radioChoice = QHBoxLayout()
+        radioChoice.addWidget(etatServiceLabel)
+        radioChoice.addWidget(etatServiceGroup)
+        radioChoice.addWidget(etatConservationLabel)
+        radioChoice.addWidget(etatConservationGroup)
         #Creation de la partie commentaire
         commentaire = QTextEdit()
 
         #insertion des differents elements dans le formulaireLayout
-        formulaireConteneur.insertRow(1, idLabel, idEdit)
+        # formulaireConteneur.insertRow(1, idLabel, idEdit)
+        formulaireConteneur.insertRow(1, idLabel)
         formulaireConteneur.insertRow(2, categorieEquipementLabel, categorieEquipementComboBox)
         formulaireConteneur.insertRow(3, marqueLabel, marquelEdit)
         formulaireConteneur.insertRow(4, modeleLabel, modelelEdit)
@@ -136,8 +140,9 @@ class Formulaire(QWidget):
         formulaireConteneur.insertRow(8, dateAcquisitionLabel, dateAcquisitionEdit)
         formulaireConteneur.insertRow(9, dateEntretienLabel, dateEntretienEdit)
         formulaireConteneur.insertRow(10, provenanceLabel, provenanceEdit)
-        formulaireConteneur.insertRow(11, etatServiceLabel, etatServiceGroup)
-        formulaireConteneur.insertRow(12, etatConservationLabel, etatConservationGroup)
+        # formulaireConteneur.insertRow(11, etatServiceLabel, etatServiceGroup)
+        # formulaireConteneur.insertRow(12, etatConservationLabel, etatConservationGroup)
+        formulaireConteneur.insertRow(11, radioChoice)
         formulaireConteneur.insertRow(13, "Commentaires : ", commentaire)
 
         #insertion des differents widgets dans la liste de widgets
@@ -160,19 +165,33 @@ class Formulaire(QWidget):
         vbox.addLayout(formulaireConteneur)
 
         # Création des variables de stockages des informatios pour les radio boutons
-        self.etatService = ""
-        self.etatConservation = ""
+        self.etatService = "En service"
+        self.etatConservation = "Quasi neuf"
 
         # Affichage de l'interface
         self.setLayout(vbox)
 
-    def service(self, text):
-        print("service")
-        self.etatService = str(text)
+    def enService(self):
+        self.etatService = "En service"
 
-    def conservation(self, text):
-        print("conservation")
-        self.etatConservation = str(text)
+    def enMaintenance(self):
+        self.etatService = "En maintenance"
+
+    def auRebus(self):
+        self.etatService = "Au rebus"
+
+    def estQuasiNeuf(self,):
+        self.etatConservation = "Quasi neuf"
+
+    def acceptable(self):
+        self.etatConservation = "Acceptable"
+
+    def enFinDeVie(self):
+        self.etatConservation = "En fin de vie"
+
+    def desuet(self):
+        self.etatConservation = "Desuet"
+
 
 if __name__ == "__main__":
 

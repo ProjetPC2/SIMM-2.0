@@ -57,7 +57,7 @@ class Main(QWidget):
         SeachBDT_Btn.setFont(QFont( 'SansSerif', 8, QFont.Bold ))
         SeachBDT_Btn.move(75, 450)
         SeachBDT_Btn.resize(150, 100)
-        SeachBDT_Btn.setIcon(QIcon('Bouton_Recherche_BdT.png'))
+        SeachBDT_Btn.setIcon(QIcon('PdC-Bouton_Recherche_BdT.png'))
         SeachBDT_Btn.setIconSize(QtCore.QSize(40,40))
 
         Stats_Btn = QPushButton('Voir les \nstatistiques', self)
