@@ -4,6 +4,8 @@ from yamlStorage import YAMLStorage
 import re
 
 
+list_categorie = ['ECG', 'IRM', 'oxymetre', 'dialyse']
+
 class EquipementManager:
     def __init__(self, pathname):
         self._pathname = pathname                               # pathname de la base de données des équipements
@@ -17,6 +19,19 @@ class EquipementManager:
         dictio['ID'] = id_eq
         # Verifier que tout ce qui est dans dictio est conforme à la forme d'un équipement et COMPLET
         db1.insert(dictio)                                      # ajout du nouvel équipement dans la base de données
+        #self._nextID = 1   # pathname de la base de données de l'archive des équip.
+        # nextID à mettre dans le fichier de configuration
+
+    def AjouterEquipement(self, dictio):
+        db1 = TinyDB(self._pathname, storage=YAMLStorage)        # data base des équipements
+        # Verifier que tout ce qui est dans dictio est conforme à la forme d'un équipement et COMPLET
+        if (self._VerifierDict(dictio)):
+            id_eq = self._ObtenirProchainID()                                   # id du nouvel équipement
+            dictio['ID'] = id_eq
+            db1.insert(dictio)           # ajout du nouvel équipement dans la base de données
+        else:
+            print('An error occured')
+
 
     def SupprimerEquipement(self, id_supp):                     # id_supp en int
         Equipement = Query()
@@ -37,7 +52,8 @@ class EquipementManager:
         result = db.search(queryUser)
         return result
 
-    def ModifierEquipement(self, id_modif, dict_modif):         # id_modif en int
+
+    def ModifierEquipement(self, id_modif, dict_modif):
         Equipement = Query()
         db = TinyDB(self._pathname, storage=YAMLStorage)        # data base des équipements
         # Verifier que tout ce qui est dans dict_modif est conforme à la forme d'un équipement et COMPLET
@@ -55,34 +71,36 @@ class EquipementManager:
 
 
     # À COMPLÉTER
-    """
-
     def _verifierChamps(self, dictio):
-
-        dictio[]
-
-
+        length_normal_dictio = 5
+        conforme = True
+        if len(dictio) is not length_normal_dictio:
+            conforme = False
+        else:
+            if 'CategorieEquipement' not in dictio:
+                conforme = False
+            elif 'Marque' not in dictio:
+                conforme = False
+            elif 'Modele' not in dictio:
+                conforme = False
+        return conforme
 
     def _VerifierDict(self, dictio):
-        conforme = self.verifierChamps(dictio)
+        conforme = self._verifierChamps(dictio)
         # Vérifier que le contenu de chaque champ est conforme à ce qui est attendu
-        for key, value in dictio:
-            if key == '':
-                if (value != TODO)
+        for key, value in dictio.items():
+            if key == 'CategorieEquipement':
+                if (value not in list_categorie):
                     conforme = False
-            elif key == '':
-            ...
-            else:
+            elif key == 'Marque':
+                if(isinstance(value, str) is False):
+                    print('Hello')
+                    conforme = False
+        return conforme
                 
         
-    def _verifierChamps(self, dictio)
-    # verifier la présence de tous les champs et qu'aucun champs supplémentaire ne soit présent
-    conforme = True
-    return conforme
 
-    """
-
-
+"""
 # TESTS
 manager = EquipementManager('DataBase_Equipement.json')
 
@@ -102,6 +120,9 @@ manager.AjouterEquipement(data)
 #manager.SupprimerEquipement(6)                     # id_supp en int
 #print(manager.RechercherEquipement(dic_request))
 #manager.ModifierEquipement(4, data)                 # id_modif en int
+
+"""
+
 
 
 
