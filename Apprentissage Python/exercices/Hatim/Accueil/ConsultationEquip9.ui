@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>921</width>
+    <width>905</width>
     <height>753</height>
    </rect>
   </property>
@@ -690,17 +690,6 @@ nous sommes programmés ainsi.</string>
     </layout>
    </item>
   </layout>
-  <zorder>layoutWidget</zorder>
-  <zorder>layoutWidget_2</zorder>
-  <zorder>layoutWidget_3</zorder>
-  <zorder>layoutWidget_4</zorder>
-  <zorder>layoutWidget_5</zorder>
-  <zorder>layoutWidget_6</zorder>
-  <zorder>layoutWidget_7</zorder>
-  <zorder>layoutWidget_8</zorder>
-  <zorder>layoutWidget_9</zorder>
-  <zorder>layoutWidget_11</zorder>
-  <zorder>label_45</zorder>
  </widget>
  <resources/>
  <connections/>
