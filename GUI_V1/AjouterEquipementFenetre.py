@@ -33,7 +33,7 @@ class AjouterEquipementFenetre(QMainWindow, AbstractWindow):
 
     def __init__(self, parent=None):
         QMainWindow.__init__(self, parent)
-
+        self.equipement = Stockage.Equipement()
         # Création des differents éléments
         self.titre = QLabel("Formulaire - Ajout d'un equipement")
         self.logo = QLabel()
@@ -44,7 +44,7 @@ class AjouterEquipementFenetre(QMainWindow, AbstractWindow):
         self.formulaire = Formulaire.Formulaire(self)
         self.formulaireRempli = FormulaireRempli.FormulaireRempli(self)
         self.formulaire.widgetList[0].textEdited.connect(self.miseAJourStatutBar)
-        self.stockage = Stockage.Stockage()
+        self.stockage = Stockage.Equipement()
         self.listeTemp = list()
         # creation du menu
         menubar = self.menuBar()
@@ -192,6 +192,7 @@ class AjouterEquipementFenetre(QMainWindow, AbstractWindow):
         # i = 1
         i=0
         for text in self.listeTemp:
+            self.equipement.listeMethodes(text)
             self.formulaireRempli.widgetList[i].setText(text)
             i += 1
 

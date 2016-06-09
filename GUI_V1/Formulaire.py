@@ -28,50 +28,50 @@ class Formulaire(QWidget):
 
         #creation de la ligne pour l'id
         idLabel = QLabel("Id :", self)
-        idEdit = QLineEdit()
+        self.idEdit = QLineEdit()
 
         #creation de la ligne pour la categorie d'equipement
         categorieEquipementLabel = QLabel("Categorie Equipement : ", self)
-        categorieEquipementComboBox = QComboBox()
+        self.categorieEquipementComboBox = QComboBox()
         for equipement in Stockage.listeCategorieEquipement:
-            categorieEquipementComboBox.addItem(equipement)
+            self.categorieEquipementComboBox.addItem(equipement)
         # creation de la ligne pour la marque de l'equipement
         marqueLabel = QLabel("Marque : ", self)
-        marquelEdit = QLineEdit()
+        self.marquelEdit = QLineEdit()
 
         # creation de la ligne pour le modele de l'equipement
         modeleLabel = QLabel("Modele : ", self)
-        modelelEdit = QLineEdit()
+        self.modelelEdit = QLineEdit()
 
         # creation de la ligne pour le numero de serie de l'equipement
         numSerieLabel = QLabel("No. de serie : ", self)
-        numSerielEdit = QLineEdit()
+        self.numSerielEdit = QLineEdit()
 
         # creation de la ligne pour la categorie d'equipement
         salleLabel = QLabel("Salle : ", self)
-        salleComboBox = QComboBox()
+        self.salleComboBox = QComboBox()
         for salle in Stockage.listeSalle:
-            salleComboBox.addItem(salle)
-        salleComboBox.setEditable(True)
+            self.salleComboBox.addItem(salle)
+        self.salleComboBox.setEditable(True)
 
         # creation de la ligne pour la categorie d'equipement
         centreServiceLabel = QLabel("Centre de service : ", self)
-        centreServiceComboBox = QComboBox()
+        self.centreServiceComboBox = QComboBox()
         for centre in Stockage.listeCentreService:
-            centreServiceComboBox.addItem(centre)
-        centreServiceComboBox.setEditable(True)
+            self.centreServiceComboBox.addItem(centre)
+        self.centreServiceComboBox.setEditable(True)
         # creation de la partie pour la date d'acquisition
         dateAcquisitionLabel = QLabel("Date d'acquisition : ")
-        dateAcquisitionEdit = QDateEdit()
-        dateAcquisitionEdit.setDate(QDate.currentDate())
+        self.dateAcquisitionEdit = QDateEdit()
+        self.dateAcquisitionEdit.setDate(QDate.currentDate())
         # creation de la partie pour la date du dernier entretien
         dateEntretienLabel = QLabel("Date du dernier entretien : ")
-        dateEntretienEdit = QDateEdit()
-        dateEntretienEdit.setDate(QDate.currentDate())
+        self.dateEntretienEdit = QDateEdit()
+        self.dateEntretienEdit.setDate(QDate.currentDate())
 
         #creation de la partie pour la provenance
         provenanceLabel = QLabel("Provenance :")
-        provenanceEdit = QLineEdit()
+        self.provenanceEdit = QLineEdit()
 
         #creation de la partie pour le choix de l'etat de service
         etatServiceConteneur = QHBoxLayout()
@@ -125,40 +125,40 @@ class Formulaire(QWidget):
         radioChoice.addWidget(etatServiceGroup)
         radioChoice.addWidget(etatConservationLabel)
         radioChoice.addWidget(etatConservationGroup)
-        #Creation de la partie commentaire
-        commentaire = QTextEdit()
+        #Creation de la partie self.commentaire
+        self.commentaire = QTextEdit()
 
         #insertion des differents elements dans le formulaireLayout
-        # formulaireConteneur.insertRow(1, idLabel, idEdit)
+        # formulaireConteneur.insertRow(1, idLabel, self.idEdit)
         formulaireConteneur.insertRow(1, idLabel)
-        formulaireConteneur.insertRow(2, categorieEquipementLabel, categorieEquipementComboBox)
-        formulaireConteneur.insertRow(3, marqueLabel, marquelEdit)
-        formulaireConteneur.insertRow(4, modeleLabel, modelelEdit)
-        formulaireConteneur.insertRow(5, numSerieLabel, numSerielEdit)
-        formulaireConteneur.insertRow(6, salleLabel, salleComboBox)
-        formulaireConteneur.insertRow(7, centreServiceLabel, centreServiceComboBox)
-        formulaireConteneur.insertRow(8, dateAcquisitionLabel, dateAcquisitionEdit)
-        formulaireConteneur.insertRow(9, dateEntretienLabel, dateEntretienEdit)
-        formulaireConteneur.insertRow(10, provenanceLabel, provenanceEdit)
+        formulaireConteneur.insertRow(2, categorieEquipementLabel, self.categorieEquipementComboBox)
+        formulaireConteneur.insertRow(3, marqueLabel, self.marquelEdit)
+        formulaireConteneur.insertRow(4, modeleLabel, self.modelelEdit)
+        formulaireConteneur.insertRow(5, numSerieLabel, self.numSerielEdit)
+        formulaireConteneur.insertRow(6, salleLabel, self.salleComboBox)
+        formulaireConteneur.insertRow(7, centreServiceLabel, self.centreServiceComboBox)
+        formulaireConteneur.insertRow(8, dateAcquisitionLabel, self.dateAcquisitionEdit)
+        formulaireConteneur.insertRow(9, dateEntretienLabel, self.dateEntretienEdit)
+        formulaireConteneur.insertRow(10, provenanceLabel, self.provenanceEdit)
         # formulaireConteneur.insertRow(11, etatServiceLabel, etatServiceGroup)
         # formulaireConteneur.insertRow(12, etatConservationLabel, etatConservationGroup)
         formulaireConteneur.insertRow(11, radioChoice)
-        formulaireConteneur.insertRow(13, "Commentaires : ", commentaire)
+        formulaireConteneur.insertRow(13, "Commentaires : ", self.commentaire)
 
         #insertion des differents widgets dans la liste de widgets
-        self.widgetList.append(idEdit)
-        self.widgetList.append(categorieEquipementComboBox)
-        self.widgetList.append(marquelEdit)
-        self.widgetList.append(modelelEdit)
-        self.widgetList.append(numSerielEdit)
-        self.widgetList.append(salleComboBox)
-        self.widgetList.append(centreServiceComboBox)
-        self.widgetList.append(dateAcquisitionEdit)
-        self.widgetList.append(dateEntretienEdit)
-        self.widgetList.append(provenanceEdit)
+        self.widgetList.append(self.idEdit)
+        self.widgetList.append(self.categorieEquipementComboBox)
+        self.widgetList.append(self.marquelEdit)
+        self.widgetList.append(self.modelelEdit)
+        self.widgetList.append(self.numSerielEdit)
+        self.widgetList.append(self.salleComboBox)
+        self.widgetList.append(self.centreServiceComboBox)
+        self.widgetList.append(self.dateAcquisitionEdit)
+        self.widgetList.append(self.dateEntretienEdit)
+        self.widgetList.append(self.provenanceEdit)
         self.widgetList.append(etatServiceGroup)
         self.widgetList.append(etatConservationGroup)
-        self.widgetList.append(commentaire)
+        self.widgetList.append(self.commentaire)
 
         #Layouts
         vbox = QVBoxLayout()

@@ -33,7 +33,7 @@ QPushButton::pressed{
 }
 
 
-#AddEq_Btn, #AddBTD_Btn, #ConsulterEq_Btn, #SeachEq_Btn, #SeachBDT_Btn, #Stats_Btn, #PrintInventaire_Btn{
+#ajouterEquipementBouton, #ajouterBonDeTravailBouton, #consulterEquipementBouton, #rechercheEquipementBouton, #rechercheBonDeTravailBouton, #statistiqueBouton, #supportBouton{
 color: white;
 background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
 border-width: 1px;
@@ -47,7 +47,7 @@ padding-right: 5px;
 
 }
 
-#AddEq_Btn::pressed, #AddBTD_Btn::pressed, #ConsulterEq_Btn::pressed, #SeachEq_Btn::pressed, #SeachBDT_Btn::pressed, #Stats_Btn::pressed, #PrintInventaire_Btn::pressed{
+#ajouterEquipementBouton::pressed, #ajouterBonDeTravailBouton::pressed, #consulterEquipementBouton::pressed, #rechercheEquipementBouton::pressed, #rechercheBonDeTravailBouton::pressed, #statistiqueBouton::pressed, #supportBouton::pressed{
 color: white;
 background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88f, stop: 0.1 #99f, stop: 0.49 #77f, stop: 0.5 #66f, stop: 1 #77f);
 border-width: 1px;
