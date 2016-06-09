@@ -14,7 +14,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: rgb(178, 186, 255);
+   <string notr="true">
 </string>
   </property>
   <widget class="QWidget" name="horizontalLayoutWidget">
@@ -108,9 +108,15 @@
       </property>
       <item>
        <widget class="QComboBox" name="boite_categorie">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
-          <width>300</width>
+          <width>500</width>
           <height>16777215</height>
          </size>
         </property>
@@ -154,7 +160,7 @@ background:rgb(255, 255, 255)</string>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>275</width>
+          <width>218</width>
           <height>20</height>
          </size>
         </property>
@@ -231,6 +237,12 @@ background:rgb(255, 255, 255)
      <layout class="QHBoxLayout" name="horizontalLayout_4">
       <item>
        <widget class="QComboBox" name="liste_etat">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>200</width>
@@ -277,7 +289,7 @@ background:rgb(255, 255, 255)</string>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>245</width>
+          <width>218</width>
           <height>20</height>
          </size>
         </property>
@@ -285,6 +297,12 @@ background:rgb(255, 255, 255)</string>
       </item>
       <item>
        <widget class="QComboBox" name="liste_centre">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>200</width>
@@ -374,6 +392,12 @@ background:rgb(255, 255, 255)</string>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
        <widget class="QComboBox" name="liste_salle">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>200</width>
@@ -421,7 +445,7 @@ background:rgb(255, 255, 255)
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>242</width>
+          <width>218</width>
           <height>20</height>
          </size>
         </property>
@@ -429,6 +453,12 @@ background:rgb(255, 255, 255)
       </item>
       <item>
        <widget class="QComboBox" name="liste_provenance">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>200</width>
