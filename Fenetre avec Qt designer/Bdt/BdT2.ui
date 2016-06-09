@@ -23,7 +23,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: rgb(232, 232, 234)</string>
+   <string notr="true">background: rgb(247, 247, 247);</string>
   </property>
   <property name="iconSize">
    <size>
@@ -78,7 +78,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../Annie-Pier/PC2/Bouton_BDT.png</pixmap>
+        <pixmap>Bouton_BDT.png</pixmap>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -368,7 +368,7 @@ background:rgb(169, 167, 170)
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../Annie-Pier/PC2/SIMM/noire/save-file-option.png</normaloff>../../../../Annie-Pier/PC2/SIMM/noire/save-file-option.png</iconset>
+         <normaloff>save-file-option.png</normaloff>save-file-option.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -409,7 +409,7 @@ background:rgb(169, 167, 170)
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../Annie-Pier/PC2/SIMM/noire/double-left-chevron.png</normaloff>../../../../Annie-Pier/PC2/SIMM/noire/double-left-chevron.png</iconset>
+         <normaloff>double-left-chevron.png</normaloff>double-left-chevron.png</iconset>
        </property>
       </widget>
      </item>
@@ -444,7 +444,7 @@ background:rgb(169, 167, 170)
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../Annie-Pier/PC2/SIMM/noire/angle-pointing-to-left (1).png</normaloff>../../../../Annie-Pier/PC2/SIMM/noire/angle-pointing-to-left (1).png</iconset>
+         <normaloff>angle-pointing-to-left (1).png</normaloff>angle-pointing-to-left (1).png</iconset>
        </property>
       </widget>
      </item>
@@ -479,7 +479,7 @@ background:rgb(169, 167, 170)
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../Annie-Pier/PC2/SIMM/noire/angle-arrow-pointing-to-right.png</normaloff>../../../../Annie-Pier/PC2/SIMM/noire/angle-arrow-pointing-to-right.png</iconset>
+         <normaloff>angle-arrow-pointing-to-right.png</normaloff>angle-arrow-pointing-to-right.png</iconset>
        </property>
       </widget>
      </item>
@@ -514,7 +514,7 @@ background:rgb(169, 167, 170)
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../Annie-Pier/PC2/SIMM/noire/double-angle-pointing-to-right.png</normaloff>../../../../Annie-Pier/PC2/SIMM/noire/double-angle-pointing-to-right.png</iconset>
+         <normaloff>double-angle-pointing-to-right.png</normaloff>double-angle-pointing-to-right.png</iconset>
        </property>
       </widget>
      </item>
@@ -806,7 +806,8 @@ background:rgb(255, 255, 255)
     </property>
     <property name="styleSheet">
      <string notr="true">
-background: QLinearGradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(0, 10, 218), stop: 1 rgb(78, 225, 225));
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #85cafc, stop: 1  #36357F);
 
 
 </string>
