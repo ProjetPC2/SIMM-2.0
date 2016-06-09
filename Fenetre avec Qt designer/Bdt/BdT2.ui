@@ -368,7 +368,7 @@ background:rgb(169, 167, 170)
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>save-file-option.png</normaloff>save-file-option.png</iconset>
+         <normaloff>save (1).png</normaloff>save (1).png</iconset>
        </property>
        <property name="iconSize">
         <size>
