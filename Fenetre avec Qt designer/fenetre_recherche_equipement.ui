@@ -6,15 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>746</width>
-    <height>649</height>
+    <width>767</width>
+    <height>604</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: #5EA6FF;</string>
+   <string notr="true">background: rgb(178, 186, 255);
+</string>
   </property>
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
@@ -30,8 +31,10 @@
      <widget class="QLabel" name="title">
       <property name="font">
        <font>
-        <family>Arial</family>
+        <family>MS Shell Dlg 2</family>
         <pointsize>18</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
        </font>
       </property>
       <property name="styleSheet">
@@ -43,61 +46,11 @@
      </widget>
     </item>
     <item>
-     <spacer name="horizontalSpacer_2">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item>
-     <widget class="QLabel" name="loupe">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>2</horstretch>
-        <verstretch>8</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>100</width>
-        <height>100</height>
-       </size>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
-      </property>
+     <widget class="QLabel" name="label">
       <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap>../Apprentissage Python/exercices/Sabrina/Recherche d'un équipement/loupe.icon.png</pixmap>
-      </property>
-      <property name="scaledContents">
-       <bool>true</bool>
+       <string>Icone loupe</string>
       </property>
      </widget>
-    </item>
-    <item>
-     <spacer name="horizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>60</width>
-        <height>0</height>
-       </size>
-      </property>
-     </spacer>
     </item>
    </layout>
   </widget>
@@ -113,14 +66,14 @@
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_7">
-      <item>
+      <item alignment="Qt::AlignLeft">
        <widget class="QLabel" name="categorie">
         <property name="font">
          <font>
-          <family>Arial</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
          </font>
         </property>
         <property name="text">
@@ -132,10 +85,10 @@
        <widget class="QLabel" name="NoSerie">
         <property name="font">
          <font>
-          <family>Arial</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
          </font>
         </property>
         <property name="text">
@@ -147,11 +100,20 @@
     </item>
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <property name="spacing">
+       <number>0</number>
+      </property>
       <property name="sizeConstraint">
        <enum>QLayout::SetMaximumSize</enum>
       </property>
-      <item alignment="Qt::AlignTop">
+      <item>
        <widget class="QComboBox" name="boite_categorie">
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <family>Arial</family>
@@ -159,8 +121,11 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background: white;
-color: #0000FF;</string>
+         <string notr="true">padding: 1px;
+border-style: solid;
+border: 1px solid black;
+border-radius: 4px;
+background:rgb(255, 255, 255)</string>
         </property>
         <item>
          <property name="text">
@@ -179,19 +144,52 @@ color: #0000FF;</string>
         </item>
        </widget>
       </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>275</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
       <item alignment="Qt::AlignTop">
        <widget class="QTextEdit" name="text_NoSerie">
         <property name="maximumSize">
          <size>
-          <width>360</width>
+          <width>200</width>
           <height>27</height>
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">background: white;
+         <string notr="true">padding: 1px;
+border-style: solid;
+border: 1px solid black;
+border-radius: 4px;
+background:rgb(255, 255, 255)
 </string>
         </property>
        </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
       </item>
      </layout>
     </item>
@@ -201,10 +199,10 @@ color: #0000FF;</string>
        <widget class="QLabel" name="etat">
         <property name="font">
          <font>
-          <family>Arial</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
          </font>
         </property>
         <property name="text">
@@ -216,10 +214,10 @@ color: #0000FF;</string>
        <widget class="QLabel" name="centre">
         <property name="font">
          <font>
-          <family>Arial</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
          </font>
         </property>
         <property name="text">
@@ -233,6 +231,12 @@ color: #0000FF;</string>
      <layout class="QHBoxLayout" name="horizontalLayout_4">
       <item>
        <widget class="QComboBox" name="liste_etat">
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <family>Arial</family>
@@ -240,8 +244,11 @@ color: #0000FF;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background: white;
-color: #0000FF;</string>
+         <string notr="true">padding: 1px;
+border-style: solid;
+border: 1px solid black;
+border-radius: 4px;
+background:rgb(255, 255, 255)</string>
         </property>
         <item>
          <property name="text">
@@ -261,7 +268,29 @@ color: #0000FF;</string>
        </widget>
       </item>
       <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>245</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
        <widget class="QComboBox" name="liste_centre">
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <family>Arial</family>
@@ -269,8 +298,11 @@ color: #0000FF;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background: white;
-color: #0000FF;</string>
+         <string notr="true">padding: 1px;
+border-style: solid;
+border: 1px solid black;
+border-radius: 4px;
+background:rgb(255, 255, 255)</string>
         </property>
         <item>
          <property name="text">
@@ -289,6 +321,19 @@ color: #0000FF;</string>
         </item>
        </widget>
       </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
      </layout>
     </item>
     <item>
@@ -297,10 +342,10 @@ color: #0000FF;</string>
        <widget class="QLabel" name="salle">
         <property name="font">
          <font>
-          <family>Arial</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
          </font>
         </property>
         <property name="text">
@@ -312,10 +357,10 @@ color: #0000FF;</string>
        <widget class="QLabel" name="provenance">
         <property name="font">
          <font>
-          <family>Arial</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
          </font>
         </property>
         <property name="text">
@@ -329,6 +374,12 @@ color: #0000FF;</string>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
        <widget class="QComboBox" name="liste_salle">
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <family>Arial</family>
@@ -336,8 +387,11 @@ color: #0000FF;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background: white;
-color: #0000FF;
+         <string notr="true">padding: 1px;
+border-style: solid;
+border: 1px solid black;
+border-radius: 4px;
+background:rgb(255, 255, 255)
 </string>
         </property>
         <item>
@@ -358,7 +412,29 @@ color: #0000FF;
        </widget>
       </item>
       <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>242</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
        <widget class="QComboBox" name="liste_provenance">
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <family>Arial</family>
@@ -366,8 +442,11 @@ color: #0000FF;
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background: white;
-color: #0000FF;</string>
+         <string notr="true">padding: 1px;
+border-style: solid;
+border: 1px solid black;
+border-radius: 4px;
+background:rgb(255, 255, 255)</string>
         </property>
         <item>
          <property name="text">
@@ -385,6 +464,19 @@ color: #0000FF;</string>
          </property>
         </item>
        </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_6">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
       </item>
      </layout>
     </item>
@@ -407,15 +499,19 @@ color: #0000FF;</string>
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <family>MS Shell Dlg 2</family>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background: white;
-color: #0000FF;</string>
+    <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+padding: 1px;
+border-style: solid;
+border: 1px solid black;
+border-radius: 4px;
+background:rgb(255, 255, 255)</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::Box</enum>
@@ -484,29 +580,6 @@ color: #0000FF;</string>
      <string/>
     </property>
    </item>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>620</x>
-     <y>620</y>
-     <width>121</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Arial</family>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background: white;
-color: #0000FF;</string>
-   </property>
-   <property name="text">
-    <string>Quitter</string>
-   </property>
   </widget>
  </widget>
  <resources/>
