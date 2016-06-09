@@ -14,16 +14,15 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">
-</string>
+   <string notr="true">background-color: rgb(234, 234, 255);</string>
   </property>
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>10</y>
+     <y>-3</y>
      <width>581</width>
-     <height>61</height>
+     <height>81</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -46,9 +45,31 @@
      </widget>
     </item>
     <item>
+     <spacer name="horizontalSpacer_7">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>30</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>Icone loupe</string>
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../../../Downloads/magnifying-glass.png</pixmap>
+      </property>
+      <property name="margin">
+       <number>0</number>
       </property>
      </widget>
     </item>
