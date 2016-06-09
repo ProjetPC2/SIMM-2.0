@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1219</width>
-    <height>943</height>
+    <width>879</width>
+    <height>648</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -464,8 +464,8 @@ Hôpital Saint-Michel </string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1219</width>
-     <height>31</height>
+     <width>879</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
