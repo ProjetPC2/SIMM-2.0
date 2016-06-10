@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>781</width>
-    <height>606</height>
+    <height>765</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -33,19 +33,19 @@ max-width: 105px
 
 QPushButton {
 color: black;
-background-color: rgb(219, 231, 248);
+background-color: rgb(240, 240, 240);
 border-width: 2px;
 border-color: grey;
 border-style: solid;
 border-radius: 4px;
 padding: 3px;
-font: bold 14px;
+font: bold 16px;
 padding-left: 5px;
 padding-right: 5px;
-min-width: 100px;
+min-width: 130px;
 max-width:150px;
-min-height: 20px;
-max-height: 20px;
+min-height: 30px;
+max-height: 30px;
 }
 
 QPushButton:hover {
@@ -109,9 +109,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
   </property>
   <layout class="QFormLayout" name="formLayout">
    <item row="0" column="0" colspan="2">
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="layoutTitre">
      <item>
-      <widget class="QLabel" name="titre">
+      <widget class="QLabel" name="titreAjoutEquipement">
        <property name="font">
         <font>
          <family>Times New Roman</family>
@@ -133,7 +133,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>plus.png</pixmap>
+        <pixmap>plus (2).png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>false</bool>
@@ -156,7 +156,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
     </layout>
    </item>
    <item row="1" column="0">
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QVBoxLayout" name="layoutTitreLables">
      <item>
       <widget class="QLabel" name="label_34">
        <property name="font">
@@ -310,9 +310,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
     </layout>
    </item>
    <item row="1" column="1">
-    <layout class="QVBoxLayout" name="verticalLayout_2">
+    <layout class="QVBoxLayout" name="layoutChamps">
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="labelId">
        <property name="font">
         <font>
          <pointsize>10</pointsize>
@@ -324,7 +324,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="comboBoxCategorie">
        <property name="font">
         <font>
          <family>Times New Roman</family>
@@ -355,16 +355,16 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_5"/>
+      <widget class="QLineEdit" name="lineEditMarque"/>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_4"/>
+      <widget class="QLineEdit" name="lineEditModele"/>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_3"/>
+      <widget class="QLineEdit" name="lineEditNoDeSerie"/>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_2">
+      <widget class="QComboBox" name="comboBoxSalle">
        <property name="font">
         <font>
          <family>Times New Roman</family>
@@ -395,7 +395,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_3">
+      <widget class="QComboBox" name="comboBoxCentreDeService">
        <property name="font">
         <font>
          <family>Times New Roman</family>
@@ -426,13 +426,13 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </widget>
      </item>
      <item>
-      <widget class="QDateEdit" name="dateEdit_2"/>
+      <widget class="QDateEdit" name="dateEditDateDaquisition"/>
      </item>
      <item>
-      <widget class="QDateEdit" name="dateEdit"/>
+      <widget class="QDateEdit" name="dateEditDateDuDernierEntretien"/>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_6"/>
+      <widget class="QLineEdit" name="lineEditProvenance"/>
      </item>
     </layout>
    </item>
@@ -450,7 +450,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <item>
-           <widget class="QLabel" name="label_3">
+           <widget class="QLabel" name="labelTitreEtatDeService">
             <property name="font">
              <font>
               <pointsize>10</pointsize>
@@ -464,21 +464,21 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_3">
             <item>
-             <widget class="QRadioButton" name="radioButton">
+             <widget class="QRadioButton" name="radioButtonEnService">
               <property name="text">
                <string>En service</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QRadioButton" name="radioButton_3">
+             <widget class="QRadioButton" name="radioButtonEnMaintenance">
               <property name="text">
                <string>En maintenance</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QRadioButton" name="radioButton_4">
+             <widget class="QRadioButton" name="radioButtonAuRebus">
               <property name="text">
                <string>Au rebus</string>
               </property>
@@ -503,7 +503,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_6">
           <item>
-           <widget class="QLabel" name="label_4">
+           <widget class="QLabel" name="labelTitreEtatDeConservation">
             <property name="font">
              <font>
               <pointsize>10</pointsize>
@@ -517,28 +517,28 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_4">
             <item>
-             <widget class="QRadioButton" name="radioButton_2">
+             <widget class="QRadioButton" name="radioButtonQuasiNeuf">
               <property name="text">
                <string>Quasi neuf</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QRadioButton" name="radioButton_5">
+             <widget class="QRadioButton" name="radioButtonAcceptable">
               <property name="text">
                <string>Acceptable</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QRadioButton" name="radioButton_6">
+             <widget class="QRadioButton" name="radioButtonEnFinDeVie">
               <property name="text">
                <string>En fin de vie</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QRadioButton" name="radioButton_7">
+             <widget class="QRadioButton" name="radioButtonDesuet">
               <property name="text">
                <string>Désuet</string>
               </property>
@@ -569,7 +569,15 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="boutonValider">
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
         <string>Valider</string>
        </property>
@@ -588,32 +596,12 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </property>
       </spacer>
      </item>
-     <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="text">
-        <string>Quitter</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer_3">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
     </layout>
    </item>
    <item row="3" column="0" colspan="2">
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
-      <widget class="QLabel" name="label_6">
+      <widget class="QLabel" name="labelTitreCommentaires">
        <property name="font">
         <font>
          <pointsize>10</pointsize>
@@ -625,7 +613,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </widget>
      </item>
      <item>
-      <widget class="QTextEdit" name="textEdit"/>
+      <widget class="QTextEdit" name="textEditCommentaires"/>
      </item>
     </layout>
    </item>
