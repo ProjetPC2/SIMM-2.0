@@ -51,12 +51,12 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLabel" name="labelIconeLoupe">
+      <widget class="QLabel" name="label">
        <property name="text">
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>Panneau de contrôle Hatim/magnifying-glass.png</pixmap>
+        <pixmap>../../../../../../Downloads/magnifier.png</pixmap>
        </property>
       </widget>
      </item>
@@ -446,12 +446,12 @@ background:rgb(247, 247, 247)</string>
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>Panneau de contrôle Hatim/refresh-1.png</normaloff>Panneau de contrôle Hatim/refresh-1.png</iconset>
+      <normaloff>../../../../../../Downloads/refresh-button.png</normaloff>../../../../../../Downloads/refresh-button.png</iconset>
     </property>
     <property name="iconSize">
      <size>
-      <width>40</width>
-      <height>40</height>
+      <width>50</width>
+      <height>50</height>
      </size>
     </property>
    </widget>
