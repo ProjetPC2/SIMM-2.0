@@ -192,9 +192,11 @@ class AjouterEquipementFenetre(QMainWindow, AbstractWindow):
         # i = 1
         i=0
         for text in self.listeTemp:
-            self.equipement.listeMethodes(text)
+            (self.equipement.listeMethodes)(text)
             self.formulaireRempli.widgetList[i].setText(text)
             i += 1
+        self.equipement.ajoutListeMethodes()
+        print(self.equipement)
 
 
 if __name__ == "__main__": #Si le fichier est lancé tout seul
