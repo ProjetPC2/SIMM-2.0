@@ -2,11 +2,23 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>900</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background: white;</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>100</width>
+    <height>100</height>
+   </size>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="gridLayoutWidget">
@@ -20,7 +32,7 @@
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="labelTitre">
        <property name="maximumSize">
         <size>
          <width>340</width>
@@ -39,7 +51,7 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="labelIconeLoupe">
        <property name="text">
         <string/>
        </property>
@@ -55,13 +67,13 @@
      <rect>
       <x>60</x>
       <y>110</y>
-      <width>780</width>
+      <width>771</width>
       <height>55</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
      <item row="1" column="0" alignment="Qt::AlignLeft">
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="comboBoxCategorieEquipement">
        <property name="minimumSize">
         <size>
          <width>200</width>
@@ -105,7 +117,7 @@ background:rgb(247, 247, 247)</string>
       </widget>
      </item>
      <item row="1" column="1" alignment="Qt::AlignLeft">
-      <widget class="QTextEdit" name="textEdit">
+      <widget class="QTextEdit" name="textEditNumeroSerie">
        <property name="maximumSize">
         <size>
          <width>200</width>
@@ -128,7 +140,7 @@ background:rgb(247, 247, 247)</string>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLabel" name="label_4">
+      <widget class="QLabel" name="labelNumeroSerie">
        <property name="maximumSize">
         <size>
          <width>16777215</width>
@@ -147,7 +159,7 @@ background:rgb(247, 247, 247)</string>
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="labelCategorieEquipement">
        <property name="font">
         <font>
          <family>MS Reference Sans Serif</family>
@@ -172,7 +184,7 @@ background:rgb(247, 247, 247)</string>
     </property>
     <layout class="QGridLayout" name="gridLayout_5">
      <item row="1" column="0" alignment="Qt::AlignLeft">
-      <widget class="QComboBox" name="comboBox_6">
+      <widget class="QComboBox" name="comboBoxEtatService">
        <property name="minimumSize">
         <size>
          <width>200</width>
@@ -216,7 +228,7 @@ background:rgb(247, 247, 247)</string>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLabel" name="label_9">
+      <widget class="QLabel" name="labelCentreService">
        <property name="maximumSize">
         <size>
          <width>16777215</width>
@@ -235,7 +247,7 @@ background:rgb(247, 247, 247)</string>
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QLabel" name="label_10">
+      <widget class="QLabel" name="labelEtatService">
        <property name="font">
         <font>
          <family>MS Reference Sans Serif</family>
@@ -248,7 +260,7 @@ background:rgb(247, 247, 247)</string>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QComboBox" name="comboBox_8">
+      <widget class="QComboBox" name="comboBoxCentreService">
        <property name="maximumSize">
         <size>
          <width>200</width>
@@ -298,7 +310,7 @@ background:rgb(247, 247, 247)</string>
     </property>
     <layout class="QGridLayout" name="gridLayout_6">
      <item row="0" column="0">
-      <widget class="QLabel" name="label_12">
+      <widget class="QLabel" name="labelSalle">
        <property name="font">
         <font>
          <family>MS Reference Sans Serif</family>
@@ -311,7 +323,7 @@ background:rgb(247, 247, 247)</string>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLabel" name="label_11">
+      <widget class="QLabel" name="labelProvenance">
        <property name="maximumSize">
         <size>
          <width>16777215</width>
@@ -330,7 +342,7 @@ background:rgb(247, 247, 247)</string>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QComboBox" name="comboBox_9">
+      <widget class="QComboBox" name="comboBoxProvenance">
        <property name="maximumSize">
         <size>
          <width>200</width>
@@ -368,7 +380,7 @@ background:rgb(247, 247, 247)</string>
       </widget>
      </item>
      <item row="1" column="0" alignment="Qt::AlignLeft">
-      <widget class="QComboBox" name="comboBox_7">
+      <widget class="QComboBox" name="comboBoxSalle">
        <property name="minimumSize">
         <size>
          <width>200</width>
@@ -413,7 +425,7 @@ background:rgb(247, 247, 247)</string>
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="boutonActualiser">
     <property name="geometry">
      <rect>
       <x>770</x>
@@ -443,7 +455,7 @@ background:rgb(247, 247, 247)</string>
      </size>
     </property>
    </widget>
-   <widget class="QTableWidget" name="tableWidget">
+   <widget class="QTableWidget" name="tableResultats">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -477,6 +489,24 @@ background:rgb(247, 247, 247)</string>
     <property name="midLineWidth">
      <number>9</number>
     </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>250</number>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>20</number>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>30</number>
+    </attribute>
+    <attribute name="verticalHeaderMinimumSectionSize">
+     <number>20</number>
+    </attribute>
+    <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderStretchLastSection">
+     <bool>false</bool>
+    </attribute>
     <row>
      <property name="text">
       <string>1</string>
@@ -484,6 +514,7 @@ background:rgb(247, 247, 247)</string>
      <property name="font">
       <font>
        <family>MS Reference Sans Serif</family>
+       <pointsize>10</pointsize>
       </font>
      </property>
     </row>
@@ -525,7 +556,7 @@ background:rgb(247, 247, 247)</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>874</width>
+     <width>1000</width>
      <height>22</height>
     </rect>
    </property>
