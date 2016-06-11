@@ -7,13 +7,15 @@ from PyQt5.QtWidgets import*
 from qtconsole.qt import QtCore
 from qtpy import QtGui
 
+from Stockage import BonDeTravail
+
 
 class BonDeTravailFenetre(QDialog):
 
     def __init__(self, parent=None):
         QDialog.__init__(self, parent)
-
         self.initUI()
+        self.bonDeTravail = BonDeTravail()
 
 
     def initUI(self):
@@ -40,11 +42,11 @@ class BonDeTravailFenetre(QDialog):
 
 
         idEdit = QLineEdit()
-        catEdit = QLineEdit()
-        markEdit = QLineEdit()
-        modelEdit = QLineEdit()
-        salleEdit = QLineEdit()
-        centreEdit = QLineEdit()
+        catEdit = QLabel("ici categorie")
+        markEdit = QLabel("ici marque")
+        modelEdit = QLabel("ici modele")
+        salleEdit = QLabel("ici salle")
+        centreEdit = QLabel("ici centre")
 
         bdtEdit = QLineEdit()
         tempsEdit = QLineEdit()
@@ -190,7 +192,11 @@ class BonDeTravailFenetre(QDialog):
         # if reply == QMessageBox.Yes:
         #     # self.hide()
         #     # self.close()
-            self.destroy()
+        self.destroy()
+
+    def enregistrer(self):
+        # catEdit =
+        pass
 
 if __name__ == '__main__':
 

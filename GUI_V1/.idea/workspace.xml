@@ -20,6 +20,116 @@
     <favorites_list name="GUI_V1" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+          <file leaf-file-name="style.qss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/style.qss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1485">
+                  <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FormulaireRempli.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/FormulaireRempli.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SupportFenetre.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SupportFenetre.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1353">
+                  <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Formulaire.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Formulaire.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2838">
+                  <caret line="89" column="10" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
+                  <folding>
+                    <element signature="e#297#307#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Stockage.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Stockage.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="622">
+                  <caret line="129" column="68" selection-start-line="129" selection-start-column="68" selection-end-line="129" selection-end-column="68" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ConsultationModificationEquipementFenetre.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/ConsultationModificationEquipementFenetre.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="523">
+                  <caret line="199" column="26" selection-start-line="199" selection-start-column="26" selection-end-line="199" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+          <file leaf-file-name="AjouterEquipementFenetre.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/AjouterEquipementFenetre.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="527">
+                  <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#287#297#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PanneauControle.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/PanneauControle.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2140">
+                  <caret line="80" column="26" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
+                  <folding>
+                    <element signature="e#89#127#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="BonDeTravailFenetre.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/BonDeTravailFenetre.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-1617">
+                  <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+                  <folding>
+                    <element signature="e#0#10#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+=======
     <leaf>
       <file leaf-file-name="Formulaire.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Formulaire.py">
@@ -34,6 +144,7 @@
         </entry>
       </file>
     </leaf>
+>>>>>>> origin/master
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -42,7 +153,6 @@
         <option value="$PROJECT_DIR$/BDD/EquipementManager.py" />
         <option value="$PROJECT_DIR$/FenetreTest.py" />
         <option value="$PROJECT_DIR$/AbstractWindow.py" />
-        <option value="$PROJECT_DIR$/BonDeTravailFenetre.py" />
         <option value="$PROJECT_DIR$/ConsultationModificationEquipementFenetre.py" />
         <option value="$PROJECT_DIR$/Support.py" />
         <option value="$PROJECT_DIR$/Statistique.py" />
@@ -50,8 +160,9 @@
         <option value="$PROJECT_DIR$/Formulaire.py" />
         <option value="$PROJECT_DIR$/PanneauControle.py" />
         <option value="$PROJECT_DIR$/style.qss" />
-        <option value="$PROJECT_DIR$/Stockage.py" />
         <option value="$PROJECT_DIR$/AjouterEquipementFenetre.py" />
+        <option value="$PROJECT_DIR$/Stockage.py" />
+        <option value="$PROJECT_DIR$/BonDeTravailFenetre.py" />
       </list>
     </option>
   </component>
@@ -86,8 +197,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -108,13 +217,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SIMM2.0-DEV" />
+  </component>
+  <component name="RunManager" selected="Python.ConsultationModificationEquipementFenetre">
+=======
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Python.AjouterEquipementFenetre">
+>>>>>>> origin/master
     <configuration default="false" name="PanneauControle" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -132,7 +249,11 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
+<<<<<<< HEAD
+    <configuration default="false" name="BonDeTravailFenetre" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
     <configuration default="false" name="AbstractWindow" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> origin/master
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -144,12 +265,20 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="GUI_V1" />
+<<<<<<< HEAD
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BonDeTravailFenetre.py" />
+=======
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AbstractWindow.py" />
+>>>>>>> origin/master
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
+<<<<<<< HEAD
+    <configuration default="false" name="Stockage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
     <configuration default="false" name="SupportFenetre" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> origin/master
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -161,7 +290,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="GUI_V1" />
+<<<<<<< HEAD
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Stockage.py" />
+=======
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SupportFenetre.py" />
+>>>>>>> origin/master
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -183,7 +316,11 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
+<<<<<<< HEAD
+    <configuration default="false" name="ConsultationModificationEquipementFenetre" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
     <configuration default="false" name="AjouterEquipementFenetre" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> origin/master
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -195,7 +332,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="GUI_V1" />
+<<<<<<< HEAD
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ConsultationModificationEquipementFenetre.py" />
+=======
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AjouterEquipementFenetre.py" />
+>>>>>>> origin/master
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -336,18 +477,25 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.PanneauControle" />
+<<<<<<< HEAD
+      <item index="1" class="java.lang.String" itemvalue="Python.BonDeTravailFenetre" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Stockage" />
+      <item index="3" class="java.lang.String" itemvalue="Python.SupportFenetre" />
+      <item index="4" class="java.lang.String" itemvalue="Python.ConsultationModificationEquipementFenetre" />
+=======
       <item index="1" class="java.lang.String" itemvalue="Python.AbstractWindow" />
       <item index="2" class="java.lang.String" itemvalue="Python.SupportFenetre" />
       <item index="3" class="java.lang.String" itemvalue="Python.Formulaire" />
       <item index="4" class="java.lang.String" itemvalue="Python.AjouterEquipementFenetre" />
+>>>>>>> origin/master
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.AjouterEquipementFenetre" />
-        <item index="1" class="java.lang.String" itemvalue="Python.PanneauControle" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Formulaire" />
+        <item index="0" class="java.lang.String" itemvalue="Python.ConsultationModificationEquipementFenetre" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Stockage" />
+        <item index="2" class="java.lang.String" itemvalue="Python.BonDeTravailFenetre" />
         <item index="3" class="java.lang.String" itemvalue="Python.SupportFenetre" />
-        <item index="4" class="java.lang.String" itemvalue="Python.AbstractWindow" />
+        <item index="4" class="java.lang.String" itemvalue="Python.PanneauControle" />
       </list>
     </recent_temporary>
   </component>
@@ -559,17 +707,12 @@
     <entry file="file://$PROJECT_DIR$/loupe.jpg" />
     <entry file="file://$PROJECT_DIR$/PC2.png" />
     <entry file="file://$PROJECT_DIR$/Options.py" />
-    <entry file="file://$PROJECT_DIR$/BonDeTravailFenetre.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fichier_conf.json" />
     <entry file="file://$PROJECT_DIR$/Support.py" />
     <entry file="file://$PROJECT_DIR$/BDD/EquipementManager.py" />
     <entry file="file://$PROJECT_DIR$/BDD/fichier_conf.json" />
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/ConsultationModificationEquipementFenetre.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6732">
@@ -577,6 +720,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/Statistique.py" />
     <entry file="file://$PROJECT_DIR$/RechercherEquipementFenetre.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -592,17 +736,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SupportFenetre.py">
+    <entry file="file://$PROJECT_DIR$/style.qss">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1485">
+          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+          <folding />
+=======
         <state relative-caret-position="325">
           <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.qss">
+    <entry file="file://$PROJECT_DIR$/Formulaire.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="2838">
+          <caret line="89" column="10" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
+          <folding>
+            <element signature="e#297#307#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PanneauControle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2140">
+          <caret line="80" column="26" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
+          <folding>
+            <element signature="e#89#127#0" expanded="true" />
+          </folding>
+=======
         <state relative-caret-position="1125">
           <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -613,15 +781,56 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/SupportFenetre.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1353">
+          <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AjouterEquipementFenetre.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
+          <folding>
+            <element signature="e#287#297#0" expanded="true" />
+          </folding>
+=======
     <entry file="file://$PROJECT_DIR$/PanneauControle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2100">
           <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Stockage.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="622">
+          <caret line="129" column="68" selection-start-line="129" selection-start-column="68" selection-end-line="129" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BonDeTravailFenetre.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1617">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConsultationModificationEquipementFenetre.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="199" column="26" selection-start-line="199" selection-start-column="26" selection-end-line="199" selection-end-column="26" />
+          <folding />
+=======
         <state relative-caret-position="750">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
         </state>
@@ -641,6 +850,7 @@
           <folding>
             <element signature="e#297#307#0" expanded="true" />
           </folding>
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
