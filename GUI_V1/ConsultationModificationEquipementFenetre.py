@@ -41,7 +41,7 @@ class ConsultationModificationEquipement(AbstractWindow):
 
 
         #Création des champs d'entrée de texte
-        identifiantEdit = QLineEdit()
+        self.identifiantEdit = QLineEdit()
         #categorieEdit = QLineEdit()
         #marqueEdit = QLineEdit()
         #modeleEdit = QLineEdit()
@@ -68,6 +68,8 @@ class ConsultationModificationEquipement(AbstractWindow):
         etatServiceLabel = QLabel("Ici Etat de service ", self)
         etatConservationLabel = QLabel("Ici Etat de conservation ", self)
         commentairesLabel = QLabel("Ici commentaires ")
+
+        self.identifiantEdit.returnPressed.connect(self.chercherEquipement)
 
         listeDesBonsDeTravailComboBox = QComboBox()
         for bon in Stockage.listeBonsDeTravail:
@@ -117,7 +119,7 @@ class ConsultationModificationEquipement(AbstractWindow):
 
         #Postionnement des differents elements dans le grid layout
         grid.addWidget(identifiant, 1, 0)
-        grid.addWidget(identifiantEdit, 1, 1)
+        grid.addWidget(self.identifiantEdit, 1, 1)
 
         grid.addWidget(categorie, 2, 0)
         grid.addWidget(categorieEquipementLabel, 2, 1)
@@ -222,6 +224,24 @@ class ConsultationModificationEquipement(AbstractWindow):
         if e.key() == Qt.Key_Escape:
             #on ferme la fenetre lors de l'appuie du bouton Esc
             self.close()
+
+    def chercherEquipement(self):
+        # chercherEquipementParId(self.identifiantEdit.text())
+        self.remplissageFormulaire()
+
+    def remplissageFormulaire(self):
+        """Methode permettant de remplir le formulaire dans le mode consultable"""
+
+        # self.formulaireRempli.widgetList[0].setText(self.equipementManager._ObtenirProchainID())
+        # i = 1
+        i = 0
+        for text in self.listeTemp:
+            self.equipement.listeMethodes[i](text)
+            self.formulaireRempli.widgetList[i].setText(text)
+            i += 1
+        self.equipement.ajoutListeMethodes()
+        print(self.equipement.dictionnaire)
+
 
 if __name__ == '__main__':
 

@@ -98,7 +98,7 @@ class RerchercherEquipementFenetre(QDialog, AbstractWindow):
         self.show()
 
         # donnees teste sous forme d'un liste de tuple
-        tableData = [
+        self.tableData = [
             ("123", 'table', "a"),
             ("456", 'chaise', "b"),
             ("789", 'toto', "c")
@@ -111,7 +111,7 @@ class RerchercherEquipementFenetre(QDialog, AbstractWindow):
         table.resize(300, 100)
         table.resizeColumnsToContents()
         # remplissage du tableau
-        for i, (name, color, lettre) in enumerate(tableData):
+        for i, (name, color, lettre) in enumerate(self.tableData):
                 #Creation des QTableWidgetItem
             nameItem = QTableWidgetItem(name)
             colorItem = QTableWidgetItem(color)
@@ -152,6 +152,10 @@ class RerchercherEquipementFenetre(QDialog, AbstractWindow):
         qr.moveCenter(cp)
         self.move(qr.topLeft())
         # self.move(qr.center)
+
+    def rechercher(self):
+        self.tableData.append()
+        pass
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

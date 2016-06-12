@@ -1,25 +1,44 @@
-GUI_V1/__pycache__/Statistique.cpython-35.pyc
-GUI_V1/.idea/GUI_V1.iml
-GUI_V1/.idea/misc.xml
-GUI_V1/.idea/modules.xml
-GUI_V1/__pycache__/AbstractWindow.cpython-35.pyc
-GUI_V1/__pycache__/AjouterEquipementFenetre.cpython-35.pyc
-GUI_V1/__pycache__/BonDeTravailFenetre.cpython-35.pyc
-GUI_V1/__pycache__/ConsultationModificationEquipementFenetre.cpython-35.pyc
-GUI_V1/.idea/workspace.xml
-GUI_V1/__pycache__/Formulaire.cpython-35.pyc
-GUI_V1/__pycache__/FormulaireRempli.cpython-35.pyc
-GUI_V1/__pycache__/Stockage.cpython-35.pyc
-GUI_V1/__pycache__/Support.cpython-35.pyc
-GUI_V1/__pycache__/RechercherEquipementFenetre.cpython-35.pyc
-GUI_V1/.idea/workspace.xml
-GUI_V1/.idea/workspace.xml
-*.iml
-.idea/misc.xml
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+#Ipython Notebook
+.ipynb_checkpoints
+
+# Pycharm
+.idea/
 *.pyc
-GUI_V1/.idea/workspace.xml
-*.pyc
-GUI_V1/.idea/workspace.xml
-GUI_V1/.idea/workspace.xml
-GUI_V1/__pycache__/AbstractWindow.cpython-35.pyc
-*.pyc
+__pycache__/
+
+# virtualenv
+venv/
