@@ -22,6 +22,7 @@ class RerchercherEquipementFenetre(QDialog, AbstractWindow):
     def __init__(self):
         super().__init__()
         self.initUI()
+        self.rechercher()
 
     def initUI(self):
         self.widgetList = list()
@@ -99,33 +100,22 @@ class RerchercherEquipementFenetre(QDialog, AbstractWindow):
 
         # donnees teste sous forme d'un liste de tuple
         self.tableData = [
-            ("123", 'table', "a"),
+            ("123", 'self.table', "a"),
             ("456", 'chaise', "b"),
             ("789", 'toto', "c")
             ]
 
-        # creation d'une table widget de taille 3x3
-        table = QTableWidget(3, 3)
+        # creation d'une self.table widget de taille 3x3
+        self.table = QTableWidget()
+        # self.table.si
            # on met les titres des colonnes
-        table.setHorizontalHeaderLabels(["ID", "Catégorie d'équipement", "Marque"])
-        table.resize(300, 100)
-        table.resizeColumnsToContents()
+        self.table.setHorizontalHeaderLabels(["ID", "Catégorie d'équipement", "Marque"])
+        self.table.resize(300, 100)
+        self.table.resizeColumnsToContents()
         # remplissage du tableau
-        for i, (name, color, lettre) in enumerate(self.tableData):
-                #Creation des QTableWidgetItem
-            nameItem = QTableWidgetItem(name)
-            colorItem = QTableWidgetItem(color)
-            lettreItem = QTableWidgetItem(lettre)
-            # Insertion des elements
-            table.setItem(i, 0, nameItem)
-            table.setItem(i, 1, colorItem)
-            table.setItem(i, 2, lettreItem)
-            # table.resizeColumnToContents(0)
-            # On fait en sorte que la table prend la largeur de la fenetre
-            table.horizontalHeader().setStretchLastSection(True)
 
             #layout = QGridLayout()
-            grid.addWidget(table, 10, 0)
+        grid.addWidget(self.table, 10, 0)
         self.resize(1000, 1000)
             #self.setLayout(layout)
 
@@ -154,8 +144,44 @@ class RerchercherEquipementFenetre(QDialog, AbstractWindow):
         # self.move(qr.center)
 
     def rechercher(self):
-        self.tableData.append()
-        pass
+        self.tableData = [
+            ("123", 'self.table', "a"),
+            ("456", 'chaise', "b"),
+            ("789", 'toto', "c")
+        ]
+        # self.tableData.append()
+        self.table.setRowCount(len(self.tableData))
+        self.table.setColumnCount(10)
+        self.table.setHorizontalHeaderLabels(["ID", "Catégorie d'équipement", "Marque", "No de serie",
+                                              "Salle", "Centre de service", "Date Acquisition", "Date dernier entretien",
+                                              "Provenance", "Etat de service", "Etat de conservation", "Commentaires"])
+        self.table.resizeColumnsToContents()
+
+        # self.table.setCol
+
+        for i, (name, color, lettre) in enumerate(self.tableData):
+            # Creation des QTableWidgetItem
+            nameItem = QTableWidgetItem(name)
+            colorItem = QTableWidgetItem(color)
+            lettreItem = QTableWidgetItem(lettre)
+            # Insertion des elements
+            self.table.setItem(i, 0, nameItem)
+            self.table.setItem(i, 1, colorItem)
+            self.table.setItem(i, 2, lettreItem)
+        # for i, (name, color, lettre) in enumerate(self.tableData):
+        #     # Creation des QTableWidgetItem
+        #     # nameItem = QTableWidgetItem(name)
+        #     # colorItem = QTableWidgetItem(color)
+        #     # lettreItem = QTableWidgetItem(lettre)
+        #     # # Insertion des elements
+        #     self.table.setItem(i, 3, nameItem)
+        #     self.table.setItem(i, 4, colorItem)
+        #     self.table.setItem(i, 5, lettreItem)
+        # self.table.resizeColumnToContents(0)
+        # On fait en sorte que la self.table prend la largeur de la fenetre
+        self.table.horizontalHeader().setStretchLastSection(True)
+
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

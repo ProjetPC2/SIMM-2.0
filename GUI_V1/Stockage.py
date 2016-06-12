@@ -190,3 +190,8 @@ class BonDeTravail():
         self.listeMethodes.append(self.modifierDescriptionInventaire)
         self.listeMethodes.append(self.modifierEtat)
 
+def listeCle(dictionnaire) :
+    cles = list()
+    for key in dictionnaire:
+        cles.append(key)
+    return cles
